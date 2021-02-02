@@ -1,5 +1,5 @@
 # COP 4331 Project
-# Project Vision
+# Product Vision
 
 The target audience of the product is for business owners/organizations as well as the customers for those businesses (average consumers).
 
@@ -16,11 +16,18 @@ Current products such as Google Calendar allow for users to record and save the 
 Our product offers improved scheduling in that it allows for all users to see when other users are available in order to make this process easier. Clients using the website will have a single, easy-access website that will manage their appointments to several different companies depending on what they need. Business owners, on the other hand, will essentially have their scheduling done for them, as their clients will be able to see times when they are available.
 
 ## Team Members
-- Hasan Assaidi
-- Yoseph Hassan
-- Jean Cestin
-- Chris Delarosa
-- Pedro Nemalceff
+- Hasan Assaidi (hsaidi5)
+- Yoseph Hassan (yo955153)
+- Jean Cestin (Blackjean122)
+- Chris Delarosa (chrisdr6)
+- Pedro Nemalceff (pedronemalceff)
 
 # Sprint 1
 
+- [Product Backlog](https://trello.com/b/KJKknr6O/project-task-board)
+- [Sprint Backlog](https://trello.com/b/KJKknr6O/project-task-board)
+- Requirements
+- Burndown Chart
+- Velocity Chart
+
+## Task Allocation

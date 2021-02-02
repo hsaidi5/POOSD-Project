@@ -19,7 +19,13 @@ Current products such as Google Calendar allow for users to record and save the 
 - [Product Backlog](https://trello.com/b/KJKknr6O/project-task-board)
 - [Sprint Backlog](https://trello.com/b/KJKknr6O/project-task-board)
 - Requirements
-- Burndown Chart
-- Velocity Chart
+- [Burndown Chart](https://docs.google.com/spreadsheets/d/12tdoDcIdkjIooK6anzd5tF59lHYUTzUjkSDbxJay16k/edit?usp=sharing)
+- [Velocity Chart](https://docs.google.com/spreadsheets/d/12s2MgZycmOZ50Mo1SNa9Wc9LwtmNB-iMbmJFyHv1GJs/edit?usp=sharing)
 
 ## Task Allocation
+
+Hasan Assaidi - Revision of product vision statement and setup of trello board
+Yoseph Hassan -
+Jean Cestin -
+Chris Delarosa -
+Pedro Nemalceff -

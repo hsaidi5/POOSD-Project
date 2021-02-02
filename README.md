@@ -25,7 +25,11 @@ Current products such as Google Calendar allow for users to record and save the 
 ## Task Allocation
 
 Hasan Assaidi - Revision of product vision statement and setup of trello board
+
 Yoseph Hassan -
+
 Jean Cestin -
+
 Chris Delarosa -
+
 Pedro Nemalceff -

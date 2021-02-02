@@ -1,4 +1,5 @@
-# POOSD-Project
+# COP 4331 Project
+# Project Vision
 
 The target audience of the product is for business owners/organizations as well as the customers for those businesses (average consumers).
 
@@ -13,3 +14,13 @@ Another approach which some companies take is that of scheduling meetings throug
 Current products such as Google Calendar allow for users to record and save the times of their meetings and appointments. On the contrary, our product allows users to not only see all of their meetings in one area, it allows them to manage the meetings all in one place (as long as the organization is registered on the website).
 
 Our product offers improved scheduling in that it allows for all users to see when other users are available in order to make this process easier. Clients using the website will have a single, easy-access website that will manage their appointments to several different companies depending on what they need. Business owners, on the other hand, will essentially have their scheduling done for them, as their clients will be able to see times when they are available.
+
+## Team Members
+- Hasan Assaidi
+- Yoseph Hassan
+- Jean Cestin
+- Chris Delarosa
+- Pedro Nemalceff
+
+# Sprint 1
+

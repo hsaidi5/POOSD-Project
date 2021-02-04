@@ -30,6 +30,6 @@ Yoseph Hassan -
 
 Jean Cestin -
 
-Chris Delarosa -
+Chris Delarosa - Worked on Burndown & Velocity charts
 
 Pedro Nemalceff -

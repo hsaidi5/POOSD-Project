@@ -27,7 +27,7 @@ Current products such as "Move" provide users with reminders to get up while wor
 
 Hasan Assaidi - Revision of product vision statement and setup of trello board
 
-Yoseph Hassan -
+Yoseph Hassan - Worked on product backlog.
 
 Jean Cestin -
 

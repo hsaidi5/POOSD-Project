@@ -36,3 +36,5 @@ _Chris Delarosa_ - Worked on Burndown & Velocity charts
 _Pedro Nemalceff_ -
 
 During this sprint, I completely changed our product's vision statement. In addition I setup the trello board for the group to collaborate on. I also created the source code file of the product and included a few of the libraries requiredto develop an android app in java. (Hasan Assaidi)
+
+While working through this sprint I mainly worked on finishing the prodcut backlog and coming up with user stories that would be consistent with what was proposed in the product vision. I also decribed the validation criteria for each of these user stories and their relative priority as well as the estimated difficulty. (Yoseph Hassan)

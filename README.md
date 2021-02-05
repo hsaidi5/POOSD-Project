@@ -27,10 +27,12 @@ Current products such as "Move" provide users with reminders to get up while wor
 
 Hasan Assaidi - Revision of product vision statement and setup of trello board
 
-Yoseph Hassan - Created user stories and validations for the product backlog.
+Yoseph Hassan - Created user stories and validations for the product backlog
 
 Jean Cestin -
 
 Chris Delarosa - Worked on Burndown & Velocity charts
 
 Pedro Nemalceff -
+
+During this sprint, I completely changed our product's vision statement. In addition I setup the trello board for the group to collaborate on. I also created the source code file of the product and included a few of the libraries requiredto develop an android app in java. (Hasan Assaidi)

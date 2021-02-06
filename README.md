@@ -42,3 +42,5 @@ While working through this sprint I mainly worked on finishing the prodcut backl
 During this sprint, I worked on the requirements. I had to include both functional and non functional requirements. I also had to make sure that each one of the requirements linked with a user story. (Pedro Nemalceff)
 
 I managed both burndown and velocity charts over the course of this sprint. For the burndown chart, I based it off a percentage of effort that the group may be exherting over each sprint in the project's life cycle. Similarly, the velocity chart is spaced to account for the number of tasks we would like to achieve for the sprint vs the amount we would actually end up completing. (Christopher Delarosa)
+
+For this sprint I reviewed the product backlog and completed the sprint backlog.Base on the effort the team chose, I made the subtask more spesific so it could be easier for us to get the project done. I also intall visual studio which is the soafware we will use to build the app

@@ -39,6 +39,6 @@ During this sprint, I completely changed our product's vision statement. In addi
 
 While working through this sprint I mainly worked on finishing the prodcut backlog and coming up with user stories that would be consistent with what was proposed in the product vision. I also decribed the validation criteria for each of these user stories and their relative priority as well as the estimated difficulty. (Yoseph Hassan)
 
-During this sprint, I worked on the requirements. I had to include both functional and non functional requirements. I also had to make sure that each one of the requirements linked with a user story.
+During this sprint, I worked on the requirements. I had to include both functional and non functional requirements. I also had to make sure that each one of the requirements linked with a user story. (Pedro Nemalceff)
 
 I managed both burndown and velocity charts over the course of this sprint. For the burndown chart, I based it off a percentage of effort that the group may be exherting over each sprint in the project's life cycle. Similarly, the velocity chart is spaced to account for the number of tasks we would like to achieve for the sprint vs the amount we would actually end up completing. (Christopher Delarosa)

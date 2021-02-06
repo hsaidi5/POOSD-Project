@@ -29,7 +29,7 @@ _Hasan Assaidi_ - Revision of product vision statement and setup of trello board
 
 _Yoseph Hassan_ - Created user stories and validations for the product backlog
 
-_Jean Cestin_ -
+_Jean Cestin_ - worked on sprint backlog 
 
 _Christopher Delarosa_ - Worked on Burndown & Velocity charts
 

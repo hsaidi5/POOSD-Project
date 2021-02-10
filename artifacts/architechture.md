@@ -32,7 +32,7 @@ See Code Complete, Chapter 3
 
 # Security
 
-See Code Complete, Chapter 3
+All of the data being inputted by the user will first be checked to make sure it is the correct information. If the input is in the correct format, it will be saved. In order to protect that information, the variables that are being used will all be set to private. To access the variables we will use getter and setter methods, in order to prevent the corruption of that data.
 
 # Performance
 
@@ -40,7 +40,7 @@ See Code Complete, Chapter 3
 
 # Scalability
 
-See Code Complete, Chapter 3
+Although new features will be able to be added to the application based on the user (such as a calendar that shows their classes), scalability is not an issue for our product. This is because our product is a mobile application which solely relies on the users needs and does not require different instances of the application to communicate with one another. Hence, the number of people which own the app does not require there to be changes to the product.
 
 # Interoperability
 
@@ -52,7 +52,7 @@ See Code Complete, Chapter 3
 
 # Input/Output
 
-The architecture of our product will be using a jsut-in-time reading scheme when reading files. This is because the files will be used to save and retrieve information about the user's courses and their respective credit hours. 
+The architecture of our product will be using a just-in-time reading scheme when reading files. This is because the files will be used to save and retrieve information about the user's courses and their respective credit hours. 
 
 # Error Processing
 

@@ -17,9 +17,7 @@ Current products such as "Move" provide users with reminders to get up while wor
 
 # Sprint 1
 
-- [Product Backlog](https://trello.com/b/KJKknr6O/project-task-board)
-- [Sprint Backlog](https://trello.com/b/KJKknr6O/project-task-board)
-- [Requirements](https://github.com/hsaidi5/POOSD-Project/blob/master/artifacts/requirements.md)
+- [Trello Board (Backlogs and Requirements)](https://trello.com/b/KJKknr6O/project-task-board)
 - [Burndown Chart](https://docs.google.com/spreadsheets/d/12tdoDcIdkjIooK6anzd5tF59lHYUTzUjkSDbxJay16k/edit?usp=sharing)
 - [Velocity Chart](https://docs.google.com/spreadsheets/d/12s2MgZycmOZ50Mo1SNa9Wc9LwtmNB-iMbmJFyHv1GJs/edit?usp=sharing)
 
@@ -44,3 +42,22 @@ During this sprint, I worked on the requirements. I had to include both function
 I managed both burndown and velocity charts over the course of this sprint. For the burndown chart, I based it off of the effort that the group may be exherting over each sprint in the project's life cycle. Similarly, the velocity chart is spaced to account for the number of tasks we would like to achieve for the sprint vs the amount we would actually end up completing. (Christopher Delarosa)
 
 For this sprint I reviewed the product backlog and completed the sprint backlog.Base on the effort the team chose, I made the subtask more spesific so it could be easier for us to get the project done. I also installed visual studio which is the sotfware we will use to build the app. (Jean Cestin)
+
+
+# Sprint 2
+
+- [Trello Board (Backlogs and Requirements)](https://trello.com/b/KJKknr6O/project-task-board)
+- [Burndown Chart](https://docs.google.com/spreadsheets/d/12tdoDcIdkjIooK6anzd5tF59lHYUTzUjkSDbxJay16k/edit?usp=sharing)
+- [Velocity Chart](https://docs.google.com/spreadsheets/d/12s2MgZycmOZ50Mo1SNa9Wc9LwtmNB-iMbmJFyHv1GJs/edit?usp=sharing)
+
+## Task Allocation
+
+_Hasan Assaidi_ - 
+
+_Yoseph Hassan_ - 
+
+_Jean Cestin_ - 
+
+_Christopher Delarosa_ - 
+
+_Pedro Nemalceff_ - 

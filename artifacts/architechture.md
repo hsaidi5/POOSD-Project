@@ -72,14 +72,12 @@ See Code Complete, Chapter 3
 
 # Build-vs-Buy Decisions
 
-This section should list the third party libraries your system is using and describe what those libraries are being used for.
-
-See Code Complete, Chapter 3
+The architecture of our program will no be using any off-the-shelf software components. This is because we will be designing the GUI and any other components from scratch. This will allow us to develop the application to the needs of the user. By creating our own components, we can reduce the risk of error by not having to risk combining incompatible components.
 
 # Reuse
 
-See Code Complete, Chapter 3
+We will not be reusing preexisting software, test cases, or any other materials. This is because we want to design and build everything from scratch in order to provide an efficient and useful solution to the product.
 
 # Change Strategy
 
-See Code Complete, Chapter 3
+Each button on the mobile application will lead to its own activiyt. This means that every interactive aspect of the mobile program will have its own screen. Hence, this allows the product to have future changes made to it. It will allow for new buttons to be created which do things such as show a calendar containing the courses of the user. Therefore, allowing there to be future upgradability in a way which will not corrupt the essence of the project as the new and old components will be able to merge effortlessly.

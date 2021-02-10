@@ -80,4 +80,6 @@ We will not be reusing preexisting software, test cases, or any other materials.
 
 # Change Strategy
 
-Each button on the mobile application will lead to its own activiyt. This means that every interactive aspect of the mobile program will have its own screen. Hence, this allows the product to have future changes made to it. It will allow for new buttons to be created which do things such as show a calendar containing the courses of the user. Therefore, allowing there to be future upgradability in a way which will not corrupt the essence of the project as the new and old components will be able to merge effortlessly.
+Each button on the mobile application will lead to its own activity. This means that every interactive aspect of the mobile program will have its own screen. Hence, this allows the product to have future changes made to it. It will allow for new buttons to be created which do things such as show a calendar containing the courses of the user. Therefore, allowing there to be future upgradability in a way which will not corrupt the essence of the project as the new and old components will be able to merge effortlessly.
+
+In addition, we will be using git to version control the product. This will allow us to look back at previous versions of the product and make the changes necessary to change or add different components to the product.

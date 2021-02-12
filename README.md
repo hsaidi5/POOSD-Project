@@ -49,6 +49,7 @@ For this sprint I reviewed the product backlog and completed the sprint backlog.
 - [Trello Board (Backlogs and Requirements)](https://trello.com/b/KJKknr6O/project-task-board)
 - [Burndown Chart](https://docs.google.com/spreadsheets/d/12tdoDcIdkjIooK6anzd5tF59lHYUTzUjkSDbxJay16k/edit#gid=2117916616)
 - [Velocity Chart](https://docs.google.com/spreadsheets/d/12s2MgZycmOZ50Mo1SNa9Wc9LwtmNB-iMbmJFyHv1GJs/edit?usp=sharing)
+- [System Architecture](https://github.com/hsaidi5/POOSD-Project/blob/master/artifacts/architechture.md)
 
 ## Task Allocation
 

@@ -44,7 +44,7 @@ Although new features will be able to be added to the application based on the u
 
 # Interoperability
 
-See Code Complete, Chapter 3
+This section of the design document does not apply to our product, as the program has no real need to share data or resources with other software or hardware. All operations should be conducted with the project team's own code and user input.
 
 # Internationalization/Localization
 
@@ -56,11 +56,18 @@ The architecture of our product will be using a just-in-time reading scheme when
 
 # Error Processing
 
-See Code Complete, Chapter 3
+- Error processing will generally be detective, and the program should continue processing as though nothing had happened. Though it should certainly notify the user that an error has been detected, as most errors that accompany the project will likely be caused by the user.
+- Error detection will be active as the program should constantly be checking user input for validity. For example, if the user forgets to enter the number of credit hours for a certain class, the program should notify them that the corresponding text box should be filled in.
+- Once an error has been detected, the program should wait until all other associated processes are completed before notifying the user that errors have been detected. If possible, the program should notify the user where the error has occurred.
+- When handling an error message, the program should ideally throw out an exception to help handle the situation. This way, the application should be able to recover and continue. In the event that the program is unable to handle the error on its own, it should be logged.
+- How exceptions will be handled should vary depending on what type of exception has been thrown out. If at all possible, the application should be able to recover by itself. In the event that the program cannot recover, the associated exception should be logged.
+- Errors should happen at the point of detection, and be passed off to an error-handling class if possible.
+- Each class should be responsible for validating its own input data, and may have a flag indicating whether or not their input is clean. Classes on any level shouldn't assume the receiving data is clean unless told otherwise.
+- The environment's built-in exception-handling mechanism will be used as a default, unless the time comes where we will need to build our own.
 
 # Fault Tolerance
 
-See Code Complete, Chapter 3
+There's a handful of approaches when it comes to fault-tolerance, generally revolving around the system's current state at the time. Depending on the severity of the error at hand, the system could change to a state of partial operation or back itself up to a state where it is still fully functional.
 
 # Architectural Feasibility
 

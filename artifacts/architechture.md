@@ -2,21 +2,37 @@ Populate each section with information as it applies to your project. If a secti
 
 # Program Organization
 
-You should have your context, container, and component (c4model.com) diagrams in this section, along with a description and explanation of each diagram and a table that relates each block to one or more user stories. 
-
 [Context Diagram](https://github.com/hsaidi5/POOSD-Project/blob/master/artifacts/Context%20Diagram.png)
 
-Description and explanation will go here.
+| Block | User Story IDs |
+|-------|----------------|
+| Mobile Scheduling System | U000 - U010 |
+
+The context system is a simple interaction between the user and the mobile scheduling app. With college students being the target audience for this project, the context diagram provides a general view of how they would go about using the scheduling software.
 
 [Container Diagram](https://github.com/hsaidi5/POOSD-Project/blob/master/artifacts/Container%20Diagram.png)
 
-Description and explanation will go here.
+| Block | User Story IDs |
+|-------|----------------|
+| Mobile App | U000 - U010 |
+
+Through a mobile app on their Android device, the users will then be able to officially upload relevant data. The application will then keep and store this information, then creating a proper work schedule based off what's been given. Because we will not be using a database for this project, information will be stored locally within the mobile app's files.
 
 [Component Diagram](https://github.com/hsaidi5/POOSD-Project/blob/master/artifacts/Component%20Diagram.png)
 
-Description and explanation will go here.
+| Block | User Story IDs |
+|-------|----------------|
+| Course Controller | 	U001, U005, U009 |
+| History Controller | 	U006, U010 |
+| Record Component | 	U006, U007, U010 |
+| Security Component |	 U001, U004, U005 |
+| Study Session Controller | 	U002, U003, U004, U008 |
 
-See Code Complete, Chapter 3 and https://c4model.com/
+Breaking the mobile app down further is the key components and controllers that allow the program to function in accordance with what the user wants.
+- The Course Controller is what allows the user to enter information regarding the classes they're currently taking. It will naturally allow for the user to register a new class, or remove one from the registry if they're no longer taking the corresponding course.
+- The History Controller takes the information stored in the Record Component and displays the information within to the user. Specifically, the Controller would show statistics on how long they've spent doing work for a certain class, and the average amount of time they've spent working throughout the week.
+- The Record Component is what stores statistical information mentioned above. This information is usually taken from the Study Session Controller when the user commits to a study session.
+- The Study Session Controller lets the customer dictate when they are beginning a work session for one of the classes they're registered for, how long they plan on studying, and when they plan on ending. There should be another timer within that will notify the user to take a small break and stretch their legs.
 
 # Code Design
 

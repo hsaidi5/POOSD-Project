@@ -47,12 +47,12 @@ For this sprint I reviewed the product backlog and completed the sprint backlog.
 # Sprint 2
 
 - [Trello Board (Backlogs and Requirements)](https://trello.com/b/KJKknr6O/project-task-board)
-- [Burndown Chart](https://docs.google.com/spreadsheets/d/12tdoDcIdkjIooK6anzd5tF59lHYUTzUjkSDbxJay16k/edit?usp=sharing)
+- [Burndown Chart](https://docs.google.com/spreadsheets/d/12tdoDcIdkjIooK6anzd5tF59lHYUTzUjkSDbxJay16k/edit#gid=2117916616)
 - [Velocity Chart](https://docs.google.com/spreadsheets/d/12s2MgZycmOZ50Mo1SNa9Wc9LwtmNB-iMbmJFyHv1GJs/edit?usp=sharing)
 
 ## Task Allocation
 
-_Hasan Assaidi_ - 
+_Hasan Assaidi_ - Design Document and Demonstration
 
 _Yoseph Hassan_ - 
 
@@ -61,3 +61,5 @@ _Jean Cestin_ -
 _Christopher Delarosa_ - 
 
 _Pedro Nemalceff_ - 
+
+During this sprint, I completed several of the minor subheadings of the design document. I also completed the user interface design as well as the initial demonstration of the product (a splash screen/hello world application). (Hasan Assaidi)

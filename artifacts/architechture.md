@@ -38,6 +38,8 @@ Once the "History" button is pressed, the user is taken to a screen which shows 
 | Update Courses Screen |           001, 005, 009  |
 | History Screen        |           006, 010  |
 
+To view graphical/sketch representation of the user interface click [here](https://github.com/hsaidi5/POOSD-Project/blob/master/artifacts/User%20Interface%20Design.jpg).
+
 
 # Resource Management
 

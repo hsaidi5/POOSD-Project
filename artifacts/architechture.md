@@ -22,9 +22,11 @@ The only business rule that our product applies to is the fact that we will calc
 
 # User Interface Design
 
-You should have one or more user interface screens in this section. Each screen should be accompanied by an explaination of the screens purpose and how the user will interact with it. You should relate each screen to one another as the user transitions through the states of your application. You should also have a table that relates each window or component to the support using stories. 
+Due to our product being a mobile application, the user interface is an essential aspect of the product. The first screen (home screen) will contain 3 main buttons that the user can choose from. There is a "Start Studying" button, an "Update Courses" button, and a "History" button. When the "Start Studying" button is pressed, the user is brought to a new screen where they can set and start the timer for their study session. They will also have a dropdown menu to select the courses that they have saved in order to put that time studying towards the desired course. There is also a back button to return to the home screen.
 
-See Code Complete, Chapter 3
+When the "Update Courses" button is pressed, the new screen contains 2 text entry boxes. Those boxes will take in the course name and credit hours for the course. This will allow the user to enter the desired name for the course and the amount of credit hours for the course. There will be 2 buttons below the text entry boxes. One will be "Add Course" which adds the course that the user has entered in the text box. The other button will be "Remove Course" which will remove the respective course entered by the user. Again, there will be a back button on the bottom left corner of the screen to return to the home screen.
+
+Once the "History" button is pressed, the user is taken to a screen which shows them a couple pieces of useful information. The top half of the screen will be dedicated to display the average time spent per subject/course. This will allow the user to see their weekly progress and the distribution of their time to their respective courses. On the bottom half of the screen, there will be a scroll pane which will show the previous study sessions. It will provide the name of the course they worked on and the amount of time they spent on it. Once again, this will show the user their progression for studying that week. There will also be a back button in order for the user to return to the home screen.
 
 # Resource Management
 

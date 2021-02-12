@@ -4,6 +4,18 @@ Populate each section with information as it applies to your project. If a secti
 
 You should have your context, container, and component (c4model.com) diagrams in this section, along with a description and explanation of each diagram and a table that relates each block to one or more user stories. 
 
+[Context Diagram](https://github.com/hsaidi5/POOSD-Project/blob/master/artifacts/Context%20Diagram.png)
+
+Description and explanation will go here.
+
+[Container Diagram](https://github.com/hsaidi5/POOSD-Project/blob/master/artifacts/Container%20Diagram.png)
+
+Description and explanation will go here.
+
+[Component Diagram](https://github.com/hsaidi5/POOSD-Project/blob/master/artifacts/Component%20Diagram.png)
+
+Description and explanation will go here.
+
 See Code Complete, Chapter 3 and https://c4model.com/
 
 # Code Design

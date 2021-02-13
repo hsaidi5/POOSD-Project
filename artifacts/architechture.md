@@ -118,7 +118,7 @@ See Code Complete, Chapter 3
 
 # Overengineering
 
-See Code Complete, Chapter 3
+This system will not operate as robustness, because the system will not be error free. the user will have to enter his/her username and password correctly another to log in through the system. However, it won't be case sensitive another to give the user easy access to the system.
 
 # Build-vs-Buy Decisions
 

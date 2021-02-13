@@ -36,9 +36,8 @@ Breaking the mobile app down further is the key components and controllers that 
 
 # Code Design
 
-You should have your UML Class diagram and any other useful UML diagrams in this section. Each diagram should be accompanied by a brief description explaining what the elements are and why they are in the diagram. For your class diagram, you must also include a table that relates each class to one or more user stories. 
-
-See Code Complete, Chapter 3 and https://c4model.com/
+click this link bellow to view the class diagram 
+https://github.com/hsaidi5/POOSD-Project/blob/master/Class_Diagram.jpg
 
 # Data Design
 

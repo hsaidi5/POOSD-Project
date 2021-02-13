@@ -79,7 +79,7 @@ All of the data being inputted by the user will first be checked to make sure it
 
 # Performance
 
-See Code Complete, Chapter 3
+  As for performance, this system must have a drop down menu for the user to choose the course he/she wants to work on. After the user set the time, when the user press start the timer must start count down toward zero. The user should have username and a passwork to log in, and because this system is based on time management, each request must not take more than 15 seconds. Also, the system should remind the user to get up and move around every 30 minutes of working. Nevertheless the time the user spends on working should save in the course history for the selected course.
 
 # Scalability
 

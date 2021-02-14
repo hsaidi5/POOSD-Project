@@ -56,7 +56,7 @@ For this sprint I reviewed the product backlog and completed the sprint backlog.
 
 _Hasan Assaidi_ - Design Document and Demonstration
 
-_Yoseph Hassan_ - 
+_Yoseph Hassan_ - User Stories, requirements, design document, and Trello board.
 
 _Jean Cestin_ - 
 
@@ -64,4 +64,6 @@ _Christopher Delarosa_ -
 
 _Pedro Nemalceff_ - 
 
-During this sprint, I completed several of the minor subheadings of the design document. I also completed the user interface design as well as the initial demonstration of the product (a splash screen/hello world application). (Hasan Assaidi)
+During this sprint, I completed several of the minor subheadings of the design document. I also completed the user interface design as well as the initial demonstration of the product (a splash screen/hello world application). (Hasan Assaidi)\
+
+During this sprint, (Yoseph Hassan)

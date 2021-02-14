@@ -113,7 +113,8 @@ There's a handful of approaches when it comes to fault-tolerance, generally revo
 
 # Architectural Feasibility
 
-See Code Complete, Chapter 3
+In terms of architectural feasibility,
+
 
 # Overengineering
 

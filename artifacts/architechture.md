@@ -90,8 +90,7 @@ This section of the design document does not apply to our product, as the progra
 
 # Internationalization/Localization
 
-Currently we are supporting a more localized model and don't have plans on supporting multiple locales. Our application isn't going to be used commercially so internationalization isn't really a priority of ours.
-
+Currently we are supporting a more localized model and don't have plans on supporting multiple locales. Over time, the app could be used commercially if it gets popular or useful enough. For now, we are focused on localization. 
 # Input/Output
 
 The architecture of our product will be using a just-in-time reading scheme when reading files. This is because the files will be used to save and retrieve information about the user's courses and their respective credit hours. 
@@ -113,7 +112,7 @@ There's a handful of approaches when it comes to fault-tolerance, generally revo
 
 # Architectural Feasibility
 
-In terms of architectural feasibility, the sytem seems to be feasible in accordance with the team's individual experiences. We theoretically should be able to complete the project to the required specifications proposed.
+In terms of architectural feasibility, the system seems to be feasible in accordance with the team's individual experiences. We theoretically should be able to complete the project to the required specifications proposed.
 
 
 # Overengineering

@@ -64,6 +64,6 @@ _Christopher Delarosa_ -
 
 _Pedro Nemalceff_ - 
 
-During this sprint, I completed several of the minor subheadings of the design document. I also completed the user interface design as well as the initial demonstration of the product (a splash screen/hello world application). (Hasan Assaidi)\
+During this sprint, I completed several of the minor subheadings of the design document. I also completed the user interface design as well as the initial demonstration of the product (a splash screen/hello world application). (Hasan Assaidi)
 
-During this sprint, (Yoseph Hassan)
+During this sprint, I added five more user stories as well as five more requirements to go with them. I updated the Trello board accordingly and also elaborated on some of the sections of the design document. (Yoseph Hassan)

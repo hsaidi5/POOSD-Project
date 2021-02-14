@@ -113,7 +113,7 @@ There's a handful of approaches when it comes to fault-tolerance, generally revo
 
 # Architectural Feasibility
 
-In terms of architectural feasibility,
+In terms of architectural feasibility, the sytem seems to be feasible in accordance with the team's individual experiences. We theoretically should be able to complete the project to the required specifications proposed.
 
 
 # Overengineering

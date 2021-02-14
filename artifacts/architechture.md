@@ -70,7 +70,7 @@ To view graphical/sketch representation of the user interface click [here](https
 
 # Resource Management
 
-See Code Complete, Chapter 3
+In terms of resource management, this will be dictated by the machine in which the program is running considering everything will be running and stored locally. This project will ideally be desgined such taht it can run on realtively modern hardware without extensive memory requirements. The intention is that this application can run on modern standards of hardware.
 
 # Security
 
@@ -90,7 +90,7 @@ This section of the design document does not apply to our product, as the progra
 
 # Internationalization/Localization
 
-See Code Complete, Chapter 3
+Currently we are supporting a more localized model and don't have plans on supporting multiple locales. Our application isn't going to be used commercially so internationalization isn't really a priority of ours.
 
 # Input/Output
 

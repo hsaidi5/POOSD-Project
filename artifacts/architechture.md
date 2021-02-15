@@ -37,7 +37,7 @@ Breaking the mobile app down further is the key components and controllers that 
 # Code Design
 
 click on the class diagram to see image  
-[Class Diagram](https://github.com/hsaidi5/POOSD-Project/blob/master/Class_Diagram.jpg)
+[Class Diagram](https://github.com/hsaidi5/POOSD-Project/blob/master/Page%200%20(1).jpg)
 
 # Data Design
 

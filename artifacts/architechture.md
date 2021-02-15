@@ -1,6 +1,7 @@
 # Program Organization
 
-[Context Diagram](https://github.com/hsaidi5/POOSD-Project/blob/master/artifacts/Context%20Diagram.png)
+## Context Diagram
+![Context Diagram](https://github.com/hsaidi5/POOSD-Project/blob/master/artifacts/Context%20Diagram.png)
 
 | Block | User Story IDs |
 |-------|----------------|
@@ -8,7 +9,8 @@
 
 The context system is a simple interaction between the user and the mobile scheduling app. With college students being the target audience for this project, the context diagram provides a general view of how they would go about using the scheduling software.
 
-[Container Diagram](https://github.com/hsaidi5/POOSD-Project/blob/master/artifacts/Container%20Diagram.png)
+## Container Diagram
+![Container Diagram](https://github.com/hsaidi5/POOSD-Project/blob/master/artifacts/Container%20Diagram.png)
 
 | Block | User Story IDs |
 |-------|----------------|
@@ -16,7 +18,8 @@ The context system is a simple interaction between the user and the mobile sched
 
 Through a mobile app on their Android device, the users will then be able to officially upload relevant data. The application will then keep and store this information, then creating a proper work schedule based off what's been given. Because we will not be using a database for this project, information will be stored locally within the mobile app's files.
 
-[Component Diagram](https://github.com/hsaidi5/POOSD-Project/blob/master/artifacts/Component%20Diagram.png)
+## Component Diagram
+![Component Diagram](https://github.com/hsaidi5/POOSD-Project/blob/master/artifacts/Component%20Diagram.png)
 
 | Block | User Story IDs |
 |-------|----------------|
@@ -33,9 +36,8 @@ Breaking the mobile app down further is the key components and controllers that 
 - The Study Session Controller lets the customer dictate when they are beginning a work session for one of the classes they're registered for, how long they plan on studying, and when they plan on ending. There should be another timer within that will notify the user to take a small break and stretch their legs.
 
 # Code Design
-
-click on the class diagram to see image  
-[Class Diagram](https://github.com/hsaidi5/POOSD-Project/blob/master/Page%200%20(1).jpg)
+ 
+![Class Diagram](https://github.com/hsaidi5/POOSD-Project/blob/master/Page%200%20(1).jpg)
 
 # Data Design
 
@@ -65,7 +67,8 @@ Once the "History" button is pressed, the user is taken to a screen which shows 
 | Update Courses Screen |           001, 005, 009  |
 | History Screen        |           006, 010  |
 
-To view graphical/sketch representation of the user interface click [here](https://github.com/hsaidi5/POOSD-Project/blob/master/artifacts/User%20Interface%20Design.jpg).
+## User Interface Sketch
+![here](https://github.com/hsaidi5/POOSD-Project/blob/master/artifacts/User%20Interface%20Design.jpg).
 
 
 # Resource Management

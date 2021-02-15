@@ -60,7 +60,7 @@ _Yoseph Hassan_ - User Stories, requirements, design document, and Trello board.
 
 _Jean Cestin_ - Class Diagram (code Design), Performance, and Overengineering
 
-_Christopher Delarosa_ - 
+_Christopher Delarosa_ - Subheadings and Diagram Creation (Design Document)
 
 _Pedro Nemalceff_ - 
 
@@ -69,3 +69,5 @@ During this sprint, I completed several of the minor subheadings of the design d
 During this sprint, I added five more user stories as well as five more requirements to go with them. I updated the Trello board accordingly and also elaborated on some of the sections of the design document. (Yoseph Hassan)
 
 In this sprint (sprint 2), I was able to read some files on wikipedia to find more information about class diagram another to complete the code design for sprint 2. I also completed the performnce of the system nd the overengineering.(Jen Cestin)
+
+I managed a handful of the subheadings for the Design Document for this sprint, which included making the context, container, and component diagrams for the Program Organization subheading. The Interoperability, Error Processing, and Fault Tolerance subheadings were also managed by myself. (Christopher Delarosa)

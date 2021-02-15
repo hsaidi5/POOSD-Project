@@ -43,7 +43,9 @@ Our product will not be using a database to store information. Instead, we will 
 
 # Business Rules
 
-The only business rule that our product applies to is the fact that we will calculate the number of hours of study for each course every week will be based off of 3 hours per credit hour. This was found to be the general rule across most universities/colleges.
+- When a user adds a course, the application provides them with the amount of time they should dedicate to the course per week.
+- The number of hours of study for each course every week will be based off of 3 hours per credit hour. This was found to be the general rule across most universities/colleges.
+- The application reminds the user to move twice every study session.
 
 # User Interface Design
 

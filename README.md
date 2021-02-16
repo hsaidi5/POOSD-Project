@@ -71,3 +71,25 @@ During this sprint, I added five more user stories as well as five more requirem
 In this sprint (sprint 2), I was able to read some files on wikipedia to find more information about class diagram another to complete the code design for sprint 2. I also completed the performnce of the system nd the overengineering.(Jen Cestin)
 
 I managed a handful of the subheadings for the Design Document for this sprint, which included making the context, container, and component diagrams for the Program Organization subheading. The Interoperability, Error Processing, and Fault Tolerance subheadings were also managed by myself. (Christopher Delarosa)
+
+# Sprint 3
+
+- [Trello Board (Backlogs and Requirements)](https://trello.com/b/KJKknr6O/project-task-board)
+- [Burndown Chart](https://docs.google.com/spreadsheets/d/12tdoDcIdkjIooK6anzd5tF59lHYUTzUjkSDbxJay16k/edit#gid=2117916616)
+- [Velocity Chart](https://docs.google.com/spreadsheets/d/12s2MgZycmOZ50Mo1SNa9Wc9LwtmNB-iMbmJFyHv1GJs/edit?usp=sharing)
+- [System Architecture](https://github.com/hsaidi5/POOSD-Project/blob/master/artifacts/architechture.md)
+- Source Code
+- Tests
+- [Demonstration]()
+
+## Task Allocation
+
+_Hasan Assaidi_ - 
+
+_Yoseph Hassan_ - 
+
+_Jean Cestin_ - 
+
+_Christopher Delarosa_ - 
+
+_Pedro Nemalceff_ - 

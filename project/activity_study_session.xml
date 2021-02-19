@@ -11,6 +11,7 @@
         android:id="@+id/editTextTime"
         android:layout_width="117dp"
         android:layout_height="69dp"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="time"
         android:text="@string/timer"
@@ -19,8 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.727"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="0.724" />
 
     <Button
         android:id="@+id/button"
@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.371" />
+        app:layout_constraintVertical_bias="0.377" />
 
     <Button
         android:id="@+id/backFromStudy"
@@ -47,13 +47,14 @@
 
     <Spinner
         android:id="@+id/selectCourse"
-        android:layout_width="201dp"
-        android:layout_height="50dp"
+        android:layout_width="158dp"
+        android:layout_height="51dp"
         android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.55" />
+        app:layout_constraintVertical_bias="0.552" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

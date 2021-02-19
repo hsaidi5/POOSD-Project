@@ -7,7 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class UpdateCourses extends AppCompatActivity {
+public class UpdateCourses extends AppCompatActivity
+{
 
     private Button back;
 
@@ -16,13 +17,19 @@ public class UpdateCourses extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_courses);
 
+        configureBackButton();
+    }
+
+    private void configureBackButton()
+    {
         back = findViewById(R.id.backFromUpdate);
 
-        back.setOnClickListener(new View.OnClickListener() {
+        back.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(UpdateCourses.this, MainActivity.class);
-                startActivity(intent);
+            public void onClick(View v)
+            {
+                finish();
             }
         });
     }

@@ -57,6 +57,7 @@ public class StudySession extends AppCompatActivity
         });
     }
 
+    // Implemented by Christopher Delarosa
     private void configureStartButton()
     {
         start = findViewById(R.id.button);
@@ -72,6 +73,7 @@ public class StudySession extends AppCompatActivity
         });
     }
 
+    // Implemented by Christopher Delarosa
     private void runTimer()
     {
         final EditText timeText = findViewById(R.id.editTextTime);

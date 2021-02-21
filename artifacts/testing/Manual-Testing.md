@@ -34,3 +34,7 @@ Step 15: Click on the "Back" button in the bottom left corner. (This should retu
 
 ## Add/Remove Buttons
 
+Step 1: Launch application on mobile device/emulator.
+
+Step 2: 
+

@@ -78,15 +78,15 @@ I managed a handful of the subheadings for the Design Document for this sprint, 
 - [Burndown Chart](https://docs.google.com/spreadsheets/d/12tdoDcIdkjIooK6anzd5tF59lHYUTzUjkSDbxJay16k/edit#gid=2117916616)
 - [Velocity Chart](https://docs.google.com/spreadsheets/d/12s2MgZycmOZ50Mo1SNa9Wc9LwtmNB-iMbmJFyHv1GJs/edit?usp=sharing)
 - [System Architecture](https://github.com/hsaidi5/POOSD-Project/blob/master/artifacts/architechture.md)
-- Source Code
-- Tests
+- [Source Code](https://github.com/hsaidi5/POOSD-Project/tree/master/project)
+- [Tests](https://github.com/hsaidi5/POOSD-Project/tree/master/artifacts/testing)
 - [Demonstration]()
 
 ## Task Allocation
 
-_Hasan Assaidi_ - 
+_Hasan Assaidi_ - GUI User Story, Testing, and Demonstration
 
-_Yoseph Hassan_ - Add/remove course user story.
+_Yoseph Hassan_ - Add/Remove Course User Story
 
 _Jean Cestin_ - 
 
@@ -95,3 +95,5 @@ _Christopher Delarosa_ -
 _Pedro Nemalceff_ - 
 
  During this sprint, I added the adding and removing course name and credit hours functionality which was described in the user stories in the Trello board. I associated the adding and removing with an Arrayist data structure. I then mapped these functions to the add and remove buttons which are found on the update courses page in the application. I then proceeded to manually test the functionality of the code. I provided testing documentation in this gituhub. (Yoseph Hassan)
+ 
+ During this sprint, I created the general GUI for the application. I did so by creating several different activities and linking each button to its associated screen/activity. I tested the user story using a manual test. I also merged all of the different user stories that were worked on into one version of the application. In addition, I completed the demonstration of the progress made so far by the end of the sprint. (Hasan Assaidi)

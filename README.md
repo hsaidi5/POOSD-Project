@@ -86,10 +86,12 @@ I managed a handful of the subheadings for the Design Document for this sprint, 
 
 _Hasan Assaidi_ - 
 
-_Yoseph Hassan_ - 
+_Yoseph Hassan_ - Add/remove course user story.
 
 _Jean Cestin_ - 
 
 _Christopher Delarosa_ - 
 
 _Pedro Nemalceff_ - 
+
+ During this sprint, I added the adding and removing course name and credit hours functionality which was described in the user stories in the Trello board. I associated the adding and removing with an Arrayist data structure. I then mapped these functions to the add and remove buttons which are found on the update courses page in the application. I then proceeded to manually test the functionality of the code. I provided testing documentation in this gituhub. (Yoseph Hassan)

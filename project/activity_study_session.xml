@@ -7,6 +7,7 @@
     tools:context=".StudySession">
 
 
+    <!--EditText to change and display the timer-->
     <EditText
         android:id="@+id/editTextTime"
         android:layout_width="117dp"
@@ -16,14 +17,15 @@
         android:inputType="time"
         android:text="@string/timer"
         android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/startTimer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.724" />
 
+    <!--Button to start the timer-->
     <Button
-        android:id="@+id/button"
+        android:id="@+id/startTimer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/start_timer"
@@ -33,6 +35,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.377" />
 
+    <!--Button to return to the home page from the Study Session activity-->
     <Button
         android:id="@+id/backFromStudy"
         android:layout_width="86dp"
@@ -45,6 +48,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.956" />
 
+    <!--Spinner is the dropdown menu to store the current enrolled courses-->
     <Spinner
         android:id="@+id/selectCourse"
         android:layout_width="158dp"

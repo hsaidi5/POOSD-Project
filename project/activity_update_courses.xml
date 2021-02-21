@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".UpdateCourses">
 
+    <!--Button to add the course entered by the user-->
     <Button
         android:id="@+id/addCourse"
         android:layout_width="100dp"
@@ -17,6 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--Button to remove the course entered by the user-->
     <Button
         android:id="@+id/removeCourse"
         android:layout_width="100dp"
@@ -29,6 +31,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.499" />
 
+    <!--EditText to input the credit hours-->
     <EditText
         android:id="@+id/courseNumber"
         android:layout_width="wrap_content"
@@ -44,6 +47,7 @@
         app:layout_constraintVertical_bias="0.097"
         android:autofillHints="" />
 
+    <!--EditText to input the course name-->
     <EditText
         android:id="@+id/courseName"
         android:layout_width="wrap_content"
@@ -58,6 +62,7 @@
         app:layout_constraintVertical_bias="0.26"
         android:importantForAutofill="no" />
 
+    <!--Button to return to the View Courses activity from the activity-->
     <Button
         android:id="@+id/backFromUpdate"
         android:layout_width="wrap_content"
@@ -69,4 +74,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.95" />
+
+    <!--TextView to display the confirmation of adding or removing a course-->
+    <TextView
+        android:id="@+id/confirmation"
+        android:layout_width="320dp"
+        android:layout_height="29dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.676" />
 </androidx.constraintlayout.widget.ConstraintLayout>

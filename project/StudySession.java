@@ -4,14 +4,23 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
+
+import java.util.Locale;
 
 public class StudySession extends AppCompatActivity
 {
     private Button back;
+    private Button start;
+    private int seconds = 0;
+    private boolean running;
+    private boolean wasRunning;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,9 +29,11 @@ public class StudySession extends AppCompatActivity
 
         setupDropdownList();
         configureBackButton();
+        configureStartButton();
 
     }
 
+    // Initializes the dropdown list the user uses to select the current course they are working on
     private void setupDropdownList()
     {
         Spinner enrolledClasses = (Spinner) findViewById(R.id.selectCourse);
@@ -32,6 +43,7 @@ public class StudySession extends AppCompatActivity
         enrolledClasses.setAdapter(myAdapter);
     }
 
+    // Function to return back to the home page from the Study Session activity
     private void configureBackButton()
     {
         back = findViewById(R.id.backFromStudy);
@@ -42,6 +54,51 @@ public class StudySession extends AppCompatActivity
             public void onClick(View v)
             {
                 finish();
+            }
+        });
+    }
+
+    // Implemented by Christopher Delarosa
+    private void configureStartButton()
+    {
+        start = findViewById(R.id.startTimer);
+
+        start.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                running = true;
+                runTimer();
+            }
+        });
+    }
+
+    // Implemented by Christopher Delarosa
+    private void runTimer()
+    {
+        final EditText timeText = findViewById(R.id.editTextTime);
+        final Handler handler = new Handler();
+
+        handler.post(new Runnable()
+        {
+            @Override
+
+            public void run()
+            {
+                int minutes = (seconds % 3600) / 60;
+                int secs = seconds;
+
+                String time = String.format(Locale.getDefault(), "%02d:%02d", minutes, secs);
+
+                timeText.setText(time);
+
+                if (running)
+                {
+                    seconds++;
+                }
+
+                handler.postDelayed(this, 1000);
             }
         });
     }

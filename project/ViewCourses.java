@@ -22,6 +22,7 @@ public class ViewCourses extends AppCompatActivity
         configureBackButton();
     }
 
+    // Function to map button press to continue to the Update Courses activity
     private void configureUpdateCourses()
     {
         updateCourses = findViewById(R.id.updateCourses);
@@ -37,6 +38,7 @@ public class ViewCourses extends AppCompatActivity
         });
     }
 
+    // Function to return from the View Courses activity back to the home page
     private void configureBackButton()
     {
         back = findViewById(R.id.backFromView);

@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+    // Function to move from home page to the Study Session activity
     public void configureStudySession()
     {
         startSession = findViewById(R.id.studySession);
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity
         });
     }
 
+    // Function to move from home page to the View Courses activity
     public void configureViewCourse()
     {
         viewCourses = findViewById(R.id.viewCourses);
@@ -56,6 +58,7 @@ public class MainActivity extends AppCompatActivity
         });
     }
 
+    // Function to move from home page to the History activity
     public void configureHistory()
     {
         getHistory = findViewById(R.id.history);

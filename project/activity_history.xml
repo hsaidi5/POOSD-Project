@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".HistoryActivity">
 
+    <!--Button to return to home page from activity-->
     <Button
         android:id="@+id/backFromHistory"
         android:layout_width="wrap_content"
@@ -18,6 +19,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.96" />
 
+    <!--Label for the average time-->
     <TextView
         android:id="@+id/averageTimeLabel"
         android:layout_width="218dp"
@@ -30,6 +32,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.734" />
 
+    <!--Scroll View in order to story the history log and allow the user to see all of their activity-->
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="263dp"
@@ -42,6 +45,7 @@
 
     </ScrollView>
 
+    <!--Label for the history log-->
     <TextView
         android:id="@+id/historyLogLabel"
         android:layout_width="wrap_content"
@@ -54,6 +58,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.959" />
 
+    <!--EditText to view the average time spent studying per week-->
     <EditText
         android:id="@+id/editTextTime2"
         android:layout_width="124dp"

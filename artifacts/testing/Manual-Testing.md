@@ -36,5 +36,23 @@ Step 15: Click on the "Back" button in the bottom left corner. (This should retu
 
 Step 1: Launch application on mobile device/emulator.
 
-Step 2: 
+Step 2: Click on the view courses button.
+
+Step 3: Click on the update courses button.
+
+Step 4: Check functionality of error checking.
+
+Step 5: Do not change input textboxes and see if error checking is working correctly.
+
+Step 6: Check if code checks for both course hours no input and course name no input by clicking ADD.
+
+Step 7: Leave textboxes empty and click ADD to see if program outputs errors for nothing being inputted.
+
+Step 8: Then for credit hours input 0 and click ADD. The code shouldn't allow for this.
+
+Step 9: Then input any string which isn't empty or "Course Name" and input an integer greater than zero and click ADD. This should output a success message.
+
+Step 10: For the remove button only the name of the course must be entered. To test the error checking enter a course which hasn't been entered before and click Remove. It should output a message saying that the course doesn't exist.
+
+Step 11: For testing purposes the remove button is also meant to output the contents og Arraylist holding the courses. Print before removing a course and after to observe that the function is working as described.
 

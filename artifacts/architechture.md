@@ -36,6 +36,7 @@ Breaking the mobile app down further is the key components and controllers that 
 - The Study Session Controller lets the customer dictate when they are beginning a work session for one of the classes they're registered for, how long they plan on studying, and when they plan on ending. There should be another timer within that will notify the user to take a small break and stretch their legs.
 
 # Code Design
+In terms of the code design we have provided a comprehensive diagram which displays information regarding the classes we plan on implementing in our system and how these classes will be used in performing the operations and functions we have described. For instance, all of these factors must work together in order to complete the functioning system. The various subsystems which must function correctly for the overall system to function as described include inserting course names and credits, the reminder function, the timer setting function, and the history feature.
  
 ![Class Diagram](https://github.com/hsaidi5/POOSD-Project/blob/master/Page%200%20(1).jpg)
 

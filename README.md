@@ -90,10 +90,12 @@ _Yoseph Hassan_ - Add/Remove Course User Story
 
 _Jean Cestin_ - 
 
-_Christopher Delarosa_ - 
+_Christopher Delarosa_ - Timer User Story
 
 _Pedro Nemalceff_ - 
 
  During this sprint, I added the adding and removing course name and credit hours functionality which was described in the user stories in the Trello board. I associated the adding and removing with an Arrayist data structure. I then mapped these functions to the add and remove buttons which are found on the update courses page in the application. I then proceeded to manually test the functionality of the code. I provided testing documentation in this gituhub. (Yoseph Hassan)
  
  During this sprint, I created the general GUI for the application. I did so by creating several different activities and linking each button to its associated screen/activity. I tested the user story using a manual test. I also merged all of the different user stories that were worked on into one version of the application. In addition, I completed the demonstration of the progress made so far by the end of the sprint. (Hasan Assaidi)
+ 
+ I created the stopwatch functionality during this Sprint, mainly focusing on ensuring that the counter displayed on screen would properly show how long it's been since the user began the study session. I've also ensured that the timer does start when the user presses the start button, which is found in the study session page of the program. Testing and further work on features and functionality are still in progress. (Christopher Delarosa)

@@ -23,6 +23,11 @@
 
 ## Add/Remove Buttons
 
+## GUI (U006)
+
+| Step | Steps to Reproduce | Expected Behaviour | 
+|------|--------------------|--------------------|
+
 Step 1: Launch application on mobile device/emulator.
 
 Step 2: Click on the view courses button.

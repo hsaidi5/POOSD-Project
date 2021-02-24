@@ -21,7 +21,7 @@
 | 15   | Click on the "Back" button in the bottom left corner. | This should return the home page/main activity. |
 
 
-## Add button (U009)
+## Add button (U001)
 
 | Step | Steps to Reproduce | Expected Behaviour | 
 |------|--------------------|--------------------|
@@ -39,7 +39,7 @@
 
 
 
-## Remove Button (Still working on functionality)
+## Remove Button (Still working on functionality) (U009)
 (Disregard below)
 
 Step 10: For the remove button only the name of the course must be entered. To test the error checking enter a course which hasn't been entered before and click Remove. It should output a message saying that the course doesn't exist.

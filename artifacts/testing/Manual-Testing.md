@@ -33,13 +33,15 @@
 | 6    | Check functionality of error checking. No input test with blank input fields. | Default update courses page with blank input boxes. |
 | 7    | Erase the text inside of the course name textbox. Then click ADD to test the error checking of the program. | Error should display to the screen indicating a lack of input for specifically the course name input field.|
 | 8    | Erase the text inside of the credit hours textbox. Then click ADD to test the error checking of the program. | Error should display to the screen indicating a lack of input for specifically the credit hours input field. |
-| 9    | Reset from the beginning with default settings by restarting the application. This erases any locally stored data. Then enter a non null string and an integer greater than 0 for credit hours. Then click the ADD button.| Success message indicating data was saved into corresponding data structure. |
+| 9    | Erase text inside of the credit horus textbox. Then enter a 0 for the amount of credit hours. | Error should display to the screen indicating that you cannot have a zero credit hour class. |
+| 10    | Reset from the beginning with default settings by restarting the application. This erases any locally stored data. Then enter a non null string and an integer greater than 0 for credit hours. Then click the ADD button.| Success message indicating data was saved into corresponding data structure. |
 
 
 
 
 ## Remove Button (Still working on functionality)
 (Disregard below)
+
 Step 10: For the remove button only the name of the course must be entered. To test the error checking enter a course which hasn't been entered before and click Remove. It should output a message saying that the course doesn't exist.
 
 Step 11: For testing purposes the remove button is also meant to output the contents og Arraylist holding the courses. Print before removing a course and after to observe that the function is working as described.

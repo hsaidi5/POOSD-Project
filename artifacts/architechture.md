@@ -37,8 +37,28 @@ Breaking the mobile app down further is the key components and controllers that 
 
 # Code Design
 In terms of the code design we have provided a comprehensive diagram which displays information regarding the classes we plan on implementing in our system and how these classes will be used in performing the operations and functions we have described. For instance, all of these factors must work together in order to complete the functioning system. The various subsystems which must function correctly for the overall system to function as described include inserting course names and credits, the reminder function, the timer setting function, and the history feature.
+
+## Initial Class Design
  
 ![Class Diagram](https://github.com/hsaidi5/POOSD-Project/blob/master/Page%200%20(1).jpg)
+
+## Current Class Design
+
+The UML diagram below shows how the different classes which we have created are interacting with each other in the current state of the product.
+
+![UML Diagram](https://github.com/hsaidi5/POOSD-Project/blob/master/artifacts/UML%20Diagram.PNG)
+
+The table below shows how the classes relate to each of the user stories.
+
+| Class                 | User Story IDs | 
+|-----------------------|----------------|
+| MainActivity           |           000  |
+| StudySession |           002, 004, 007, 008  |
+| UpdateCourses |           001, 005, 009  |
+| HistoryActivity       |           006, 010  |
+| ViewCourses   |           011 |
+| SharedData    |           011|
+| Course        |           001, 009 |
 
 # Data Design
 

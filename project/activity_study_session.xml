@@ -11,7 +11,6 @@
         android:id="@+id/editTextTime"
         android:layout_width="117dp"
         android:layout_height="69dp"
-        android:autofillHints=""
         android:ems="10"
         android:inputType="time"
         android:text="@string/timer"
@@ -20,7 +19,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.724" />
+        app:layout_constraintVertical_bias="0.727"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/button"
@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.377" />
+        app:layout_constraintVertical_bias="0.371" />
 
     <Button
         android:id="@+id/backFromStudy"
@@ -47,14 +47,46 @@
 
     <Spinner
         android:id="@+id/selectCourse"
-        android:layout_width="158dp"
-        android:layout_height="51dp"
+        android:layout_width="201dp"
+        android:layout_height="50dp"
         android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.552" />
+        app:layout_constraintVertical_bias="0.55" />
+
+    <Button
+        android:id="@+id/pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="77dp"
+        android:layout_marginLeft="77dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginBottom="73dp"
+        android:enabled="false"
+        android:text="@string/pause"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/selectCourse"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTime" />
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginRight="53dp"
+        android:layout_marginBottom="74dp"
+        android:enabled="false"
+        android:text="@string/stop"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/selectCourse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTime" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

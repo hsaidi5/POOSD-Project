@@ -37,6 +37,18 @@
 | 10    | Reset from the beginning with default settings by restarting the application. This erases any locally stored data. Then enter a non null string and an integer greater than 0 for credit hours. Then click the ADD button.| Success message indicating data was saved into corresponding data structure. |
 
 
+## Start stopwatch (U008)
+
+| Step | Steps to Reproduce | Expected Behaviour | 
+|------|--------------------|--------------------|
+| 1    | Launch application on mobile device/emulator. | Home page/main activity is showing on device. |
+| 2    | Click on the "Study Session" button. | This should take you to a new activity/screen which has a stopwatch set at 00:00, a start timer button, a dropdown menu, and a back button. The start timer button should be disabled on arrival. |
+| 3    | Select one of the existing/sample courses from the dropdown menu. | This should enable the button to start the timer. |
+| 4    | Click on the "Start Timer" button. | The clock should begin counting. The start button should also disappear from view, and be replaced with the pause and stop buttons. The dropdown menu where the courses have been selected from should also be disabled. |
+| 5    | Click on the "Pause" button. | The clock should come to a stop. The text on the button should be replaced with "Resume". |
+| 6    | Click on the "Resume" button. | The clock should continue counting from where it had left off. The text on the button should now change back to "Pause". |
+| 7    | Check the clock for proper formatting. | Wait for a minute to pass, ensuring that the seconds reset back to zero, and that the minutes also count up. |
+| 8    | Click on the "Stop" button. | The clock should come to a stop, and soon be reset. The pause and stop buttons will disappear from view, and be replaced with the start button. The dropdown menu should also be re-enabled. |
 
 
 ## Remove Button (Still working on functionality) (U009)

@@ -1,8 +1,9 @@
 package com.mytime;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -11,7 +12,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
 
 import java.util.Locale;
 
@@ -22,10 +22,17 @@ public class StudySession extends AppCompatActivity
     private Button pause;
     private Button stop;
 
+    private Button advMins;
+    private Button advSecs;
+
     private Spinner enrolledClasses;
 
     private int seconds = 0;
+    private int minutes = 0;
+    private int secs = 0;
+
     private boolean running;
+    private boolean onBreak = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +44,9 @@ public class StudySession extends AppCompatActivity
         configureStartButton();
         configurePauseButton();
         configureStopButton();
+
+        configureAdvMinutesButton();
+        configureAdvSecondsButton();
 
         runTimer();
     }
@@ -65,6 +75,34 @@ public class StudySession extends AppCompatActivity
         });
     }
 
+    private void configureAdvMinutesButton()
+    {
+        advMins = findViewById(R.id.advMinutes);
+
+        advMins.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                seconds += 840;
+            }
+        });
+    }
+
+    private void configureAdvSecondsButton()
+    {
+        advSecs = findViewById(R.id.advSeconds);
+
+        advSecs.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                seconds += 50;
+            }
+        });
+    }
+
     private void configureBackButton()
     {
         back = findViewById(R.id.backFromStudy);
@@ -83,6 +121,8 @@ public class StudySession extends AppCompatActivity
     private void configureStartButton()
     {
         start = findViewById(R.id.button);
+
+        start.setEnabled(false);
 
         start.setOnClickListener(new View.OnClickListener()
         {
@@ -163,12 +203,20 @@ public class StudySession extends AppCompatActivity
             @Override
             public void run()
             {
-                int minutes = (seconds % 3600) / 60;
-                int secs = seconds % 60;
+                minutes = (seconds % 3600) / 60;
+                secs = seconds % 60;
 
                 String time = String.format(Locale.getDefault(), "%02d:%02d", minutes, secs);
 
                 timeText.setText(time);
+
+                if (minutes != 0 && minutes % 15 == 0 && onBreak == false)
+                {
+                    onBreak = true;
+                    startBreak();
+                }
+                else if (minutes % 15 != 0 && onBreak == true)
+                    onBreak = false;
 
                 if (running)
                     seconds++;
@@ -176,5 +224,23 @@ public class StudySession extends AppCompatActivity
                 handler.postDelayed(this, 1000);
             }
         });
+    }
+
+    private void startBreak()
+    {
+        AlertDialog.Builder builder = new AlertDialog.Builder(StudySession.this);
+
+        pause.performClick();
+        builder.setTitle("It's time for a break!");
+        builder.setCancelable(false);
+        builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+        AlertDialog breakDialog = builder.create();
+        breakDialog.show();
     }
 }

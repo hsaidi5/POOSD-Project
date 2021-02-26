@@ -203,7 +203,7 @@ public class StudySession extends AppCompatActivity
             @Override
             public void run()
             {
-                minutes = (seconds % 3600) / 60;
+                minutes = seconds / 60;
                 secs = seconds % 60;
 
                 String time = String.format(Locale.getDefault(), "%02d:%02d", minutes, secs);

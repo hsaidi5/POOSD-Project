@@ -19,4 +19,6 @@
     <string name="average_time_spent_per_course">Average Time Spent Per Course:</string>
     <string name="history_log">History Log:</string>
     <string name="view_courses">View Courses</string>
+    <string name="pause">Pause</string>
+    <string name="stop">Stop</string>
 </resources>

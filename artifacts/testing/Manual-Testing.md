@@ -37,7 +37,7 @@
 | 10    | Reset from the beginning with default settings by restarting the application. This erases any locally stored data. Then enter a non null string and an integer greater than 0 for credit hours. Then click the ADD button.| Success message indicating data was saved into corresponding data structure. |
 
 
-## Start stopwatch (U008)
+## Test Stopwatch (U008)
 
 | Step | Steps to Reproduce | Expected Behaviour | 
 |------|--------------------|--------------------|

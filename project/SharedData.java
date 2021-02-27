@@ -2,6 +2,7 @@ package com.mytime;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -16,18 +17,19 @@ public class SharedData
 
     public static void saveCourses(Context context, ArrayList<Course> courses)
     {
-        SharedPreferences courseInfo = context.getSharedPreferences(MY_PREFERENCE_NAME, Context.MODE_PRIVATE);
+        SharedPreferences courseInfo = PreferenceManager.getDefaultSharedPreferences(context);
+        //SharedPreferences courseInfo = context.getSharedPreferences(MY_PREFERENCE_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = courseInfo.edit();
         Gson gson = new Gson();
         String json = gson.toJson(courses);
         editor.putString(COURSES_KEY, json);
-        editor.apply();
+        editor.commit();
     }
 
     public static ArrayList<Course> getCurrentCourses(Context context)
     {
-        SharedPreferences courseInfo = context.getSharedPreferences(MY_PREFERENCE_NAME, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = courseInfo.edit();
+        SharedPreferences courseInfo = PreferenceManager.getDefaultSharedPreferences(context);
+        //SharedPreferences courseInfo = context.getSharedPreferences(MY_PREFERENCE_NAME, Context.MODE_PRIVATE);
         Gson gson = new Gson();
         String json = courseInfo.getString(COURSES_KEY, "");
 
@@ -35,5 +37,13 @@ public class SharedData
         ArrayList<Course> currentCourses = gson.fromJson(json, type);
 
         return currentCourses;
+    }
+
+    public static void clearCourses(Context context)
+    {
+        SharedPreferences courseInfo = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor editor = courseInfo.edit();
+        editor.clear();
+        editor.commit();
     }
 }

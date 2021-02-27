@@ -15,7 +15,7 @@
         android:inputType="time"
         android:text="@string/timer"
         android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/startTimer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,7 +23,7 @@
         android:autofillHints="" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/startTimer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/start_timer"
@@ -55,5 +55,76 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.55" />
+
+    <Button
+        android:id="@+id/pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="77dp"
+        android:layout_marginLeft="77dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginBottom="73dp"
+        android:enabled="false"
+        android:text="@string/pause"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/selectCourse"
+        app:layout_constraintEnd_toStartOf="@+id/startTimer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTime" />
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="77dp"
+        android:layout_marginRight="77dp"
+        android:layout_marginBottom="73dp"
+        android:enabled="false"
+        android:text="@string/stop"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/selectCourse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/startTimer"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTime" />
+
+    <LinearLayout
+        android:id="@+id/breakTestLayout"
+        android:layout_width="322dp"
+        android:layout_height="82dp"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectCourse">
+
+        <Button
+            android:id="@+id/advSeconds"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="+50 Seconds" />
+
+        <Button
+            android:id="@+id/advMinutes"
+            android:layout_width="112dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="+14 Minutes" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="258dp"
+        android:layout_height="24dp"
+        android:text="Temporary Buttons for Testing"
+        app:layout_constraintBottom_toTopOf="@+id/breakTestLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectCourse"
+        app:layout_constraintVertical_bias="0.905" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

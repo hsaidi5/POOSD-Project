@@ -116,8 +116,8 @@ _Pedro Nemalceff_ -
 # Sprint 4
 
 - [Trello Board (Backlogs and Requirements)](https://trello.com/b/KJKknr6O/project-task-board)
-- [Burndown Chart](https://docs.google.com/spreadsheets/d/12tdoDcIdkjIooK6anzd5tF59lHYUTzUjkSDbxJay16k/edit#gid=592602226)
-- [Velocity Chart](https://docs.google.com/spreadsheets/d/12s2MgZycmOZ50Mo1SNa9Wc9LwtmNB-iMbmJFyHv1GJs/edit?usp=sharing)
+- [Burndown Chart](https://docs.google.com/spreadsheets/d/12tdoDcIdkjIooK6anzd5tF59lHYUTzUjkSDbxJay16k/edit#gid=209645838)
+- [Velocity Chart](https://docs.google.com/spreadsheets/d/12s2MgZycmOZ50Mo1SNa9Wc9LwtmNB-iMbmJFyHv1GJs/edit#gid=0)
 - [System Architecture](https://github.com/hsaidi5/POOSD-Project/blob/master/artifacts/architechture.md)
 - [Source Code](https://github.com/hsaidi5/POOSD-Project/tree/master/project)
 - [Tests](https://github.com/hsaidi5/POOSD-Project/tree/master/artifacts/testing)
@@ -125,7 +125,9 @@ _Pedro Nemalceff_ -
 
 ## Task Allocation
 
-_Hasan Assaidi_ - 
+_Hasan Assaidi_ - Save Data User Story, Update Course, and Demonstration
+
+During this sprint, I implemented a way to save the course information the user inputs into local files on the device of the user. By doing so, I was able to help Yoseph complete that aspect of updating a course. I also created the manual test for the save data user story. In addition, I created the demonstration of the most up to date version of the product.
 
 _Yoseph Hassan_ - Remove Course and View Courses User stories.
 

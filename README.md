@@ -136,7 +136,9 @@ During this sprint, I finished up the course removing functionality and started 
 
 _Jean Cestin_ - 
 
-_Christopher Delarosa_ - 
+_Christopher Delarosa_ - Stopwatch and Break Time User Stories
+
+During this sprint, I did some bug fixing for the stopwatch. I've also added functionality for Pause and Stop buttons, which will appear once the stopwatch has been started. After a few more quality of life changes, I tested the functionality of the stopwatch buttons to ensure that they worked as they should. I also worked on the Break Time user story this sprint, which essentially tells users to take a break every now and then as they work. (Christopher Delarosa)
 
 _Pedro Nemalceff_ - 
 

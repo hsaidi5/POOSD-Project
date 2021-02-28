@@ -127,10 +127,15 @@ _Pedro Nemalceff_ -
 
 _Hasan Assaidi_ - 
 
-_Yoseph Hassan_ - 
+_Yoseph Hassan_ - Remove Course and View Courses User stories.
+
+During this sprint, I finished up the course removing functionality and started working on the view courses functionality. I then tested that my code implementation works as the requirements described. I provided testing documentation in this gituhub. I updated the product and sprint backlogs in the Trello board and brainstormed new ideas for additional user stories to be added during the remainder of this project.(Yoseph Hassan)
+
 
 _Jean Cestin_ - 
 
 _Christopher Delarosa_ - 
 
 _Pedro Nemalceff_ - 
+
+

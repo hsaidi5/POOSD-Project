@@ -1,13 +1,3 @@
-/* Last update by: Yoseph Hassan 2/20/2021
-Added ArrayList which stores course names and numbers
-
-Also allows for buttons to add and remove courses from the arraylist data structure
-Still need to allow arraylist to be accessed in different classes and allow for
-a save state of the current items in the arraylist
-
- */
-
-
 package com.mytime;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,21 +21,28 @@ public class UpdateCourses extends AppCompatActivity
     private EditText cred_hours_textbox;
     private TextView confirm_textview;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_courses);
 
-        configureBackButton();
+        // Gets the list of all courses currently enrolled in.
+        ArrayList<Course> courses_data_struct = SharedData.getCurrentCourses(this);
+        if(courses_data_struct == null)
+        {
+            // Creates a new list if there is no current list of courses.
+            courses_data_struct = new ArrayList<Course>();
+        }
 
-        ArrayList<Course> courses_data_struct = new ArrayList<Course>();
         course_name_textbox = (EditText) findViewById(R.id.courseName);
         cred_hours_textbox = (EditText) findViewById(R.id.courseNumber);
         confirm_textview = (TextView) findViewById((R.id.confirmation));
 
         configureAddButton(courses_data_struct);
         configureRemoveButton(courses_data_struct);
+        configureBackButton(courses_data_struct);
     }
 
     // Function to add course inputted by user
@@ -59,10 +56,10 @@ public class UpdateCourses extends AppCompatActivity
             public void onClick(View v)
             {
                 Course c = new Course();
-                String test = course_name_textbox.getText().toString();
-                String test2 = cred_hours_textbox.getText().toString();
+                String courseName = course_name_textbox.getText().toString();
+                String credits = cred_hours_textbox.getText().toString();
                 // If the info they enter isn't correct or non existent
-                if( test.equals("") || test.equals("Course Name") )
+                if( courseName.equals("") || courseName.equals("Course Name") )
                 {
                     confirm_textview.setText("You didn't type anything for Course Name!");
 
@@ -70,26 +67,34 @@ public class UpdateCourses extends AppCompatActivity
 
                 else
                 {
-                    //confirm_textview.setText("Successfully added:"); // debugging process
-                    c.set_name(test);
+                    c.set_name(courseName);
                 }
+                //Check if a valid integer was entered
 
-                if(test2.equals("") || test2.equals("Credit Hours") || test2.equals("0"))
+                if(credits.equals("") || credits.equals("Credit Hours") || credits.equals("0"))
                 {
                     confirm_textview.setText("You didn't type anything for Credit Hours!");
                 }
 
                 else
                 {
-                    //confirm_textview.setText(test2); // debugging purposes
-                    int num = Integer.parseInt(test2);
-                    c.set_cred_hours(num);
+                    try
+                    {
+                        int num = Integer.parseInt(credits);
+                        c.set_cred_hours(num);
+                    }
+
+                    catch(NumberFormatException e)
+                    {
+                        confirm_textview.setText("You didn't type a valid integer.");
+                    }
                 }
 
                 if(c.get_cred_hours() != 0 && !(c.get_name().equals("")))
                 {
                     confirm_textview.setText("Successfully added: " + c.get_name() + " with credit hours: " + c.get_cred_hours());
                     courses_data_struct.add(c);
+                    SharedData.saveCourses(getApplicationContext(), courses_data_struct);
                 }
             }
         });
@@ -119,13 +124,15 @@ public class UpdateCourses extends AppCompatActivity
                         if(courses_data_struct.get(i).get_name().equals(name_tbox))
                         {
                             courses_data_struct.remove(i);
-                            //System.out.println("hiiiiiiii");
+                            SharedData.clearCourses(getApplicationContext());
+                            SharedData.saveCourses(getApplicationContext(), courses_data_struct);
+
+                            confirm_textview.setText("Course: " + name_tbox + " has been successfully removed.");
                         }
 
                         else
                         {
-                            //System.out.println("Doesn't exist");
-                            System.out.println("Course name: " + courses_data_struct.get(i).get_name() + ", Hours: " + courses_data_struct.get(i).get_cred_hours());
+                            confirm_textview.setText("Course: " + name_tbox + " doesn't exist.");
                         }
 
                     }
@@ -136,7 +143,7 @@ public class UpdateCourses extends AppCompatActivity
     }
 
     // Function to return to the View Courses activity from the Update Courses activity
-    private void configureBackButton()
+    private void configureBackButton(ArrayList<Course> courses_data_struct)
     {
         back = findViewById(R.id.backFromUpdate);
 

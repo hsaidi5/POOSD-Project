@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyTime">
+        <activity android:name=".HistoryActivity"></activity>
         <activity android:name=".ViewCourses"></activity>
-        <activity android:name=".HistoryActivity" />
         <activity android:name=".UpdateCourses" />
         <activity android:name=".StudySession" />
         <activity android:name=".MainActivity">

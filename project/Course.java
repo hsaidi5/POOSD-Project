@@ -1,16 +1,8 @@
 package com.mytime;
 
-import java.util.*;
-import java.io.*;
+
 import java.lang.*;
-import java.time.format.DateTimeFormatter;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
-//import java.awt.*;
-//import java.awt.event.*;
-import java.time.LocalDateTime;
+
 
 public class Course
 {

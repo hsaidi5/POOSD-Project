@@ -121,17 +121,17 @@ _Pedro Nemalceff_ -
 - [System Architecture](https://github.com/hsaidi5/POOSD-Project/blob/master/artifacts/architechture.md)
 - [Source Code](https://github.com/hsaidi5/POOSD-Project/tree/master/project)
 - [Tests](https://github.com/hsaidi5/POOSD-Project/tree/master/artifacts/testing)
-- [Demonstration](https://www.youtube.com/watch?v=ZnnNAaw29Gk)
+- [Demonstration](https://www.youtube.com/watch?v=OU9oH1pci4E)
 
 ## Task Allocation
 
 _Hasan Assaidi_ - Save Data User Story, Update Course, and Demonstration
 
-During this sprint, I implemented a way to save the course information the user inputs into local files on the device of the user. By doing so, I was able to help Yoseph complete that aspect of updating a course. I also created the manual test for the save data user story. In addition, I created the demonstration of the most up to date version of the product.
+During this sprint, I implemented a way to save the course information the user inputs into local files on the device of the user. By doing so, I was able to help Yoseph complete that aspect of updating a course. I also created the manual test for the save data user story. In addition, I created the demonstration of the most up to date version of the product. (Hasan Assaidi)
 
 _Yoseph Hassan_ - Remove Course and View Courses User stories.
 
-During this sprint, I finished up the course removing functionality and started working on the view courses functionality. I then tested that my code implementation works as the requirements described. I provided testing documentation in this gituhub. I updated the product and sprint backlogs in the Trello board and brainstormed new ideas for additional user stories to be added during the remainder of this project.(Yoseph Hassan)
+During this sprint, I finished up the course removing functionality and started working on the view courses functionality. I then tested that my code implementation works as the requirements described. I provided testing documentation in this gituhub. I updated the product and sprint backlogs in the Trello board and brainstormed new ideas for additional user stories to be added during the remainder of this project. (Yoseph Hassan)
 
 
 _Jean Cestin_ - 

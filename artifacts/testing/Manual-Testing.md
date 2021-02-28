@@ -65,7 +65,8 @@
 | 8    | Repeat Step 5. | The dialog box is currently set to appear in 15 minute intervals. Once the clock reaches 30 minutes, the dialog box should reappear. |
 
 
-## Remove Button
+## Remove Button (U009)
+
 | Step | Steps to Reproduce | Expected Behaviour | 
 |------|--------------------|--------------------|
 | 1    | Launch application on mobile device/emulator. | Home page/main activity is showing on device. |
@@ -77,5 +78,18 @@
 | 7    | Leave application and then return to update courses page. Enter name of course which has been previously added in course name and click Remove button.| Should output success message saying the course has been successfully removed. |
 
 
-## View Courses Button
+## Saving Course Information (U012)
+
+| Step | Steps to Reproduce | Expected Behaviour | 
+|------|--------------------|--------------------|
+| 1    | Launch application on mobile device/emulator. | Home page/main activity is showing on device. |
+| 2    | Click on the view courses button. | View courses page. |
+| 3    | Click on the update courses button. | Update courses page. |
+| 4    | Enter a sample name of a course in course name and click Add button.| Should output success message saying the course has been successfully added. |
+| 5    | Exit the application. | Should take user back to the phone home screen. |
+| 6    | Launch application on mobile device/emulator again. | Home page/main activity is showing on device. |
+| 7    | Click on the view courses button. | View courses page. |
+| 8    | Click on the update courses button. | Update courses page. |
+| 9    | Enter the name of the course previously entered in step 4. | Should output success message saying the course has been successfully removed (Would normally say the course does not exist if the course info was not saved). |
+
 

@@ -65,10 +65,14 @@
 | 8    | Repeat Step 5. | The dialog box is currently set to appear in 15 minute intervals. Once the clock reaches 30 minutes, the dialog box should reappear. |
 
 
-## Remove Button (Still working on functionality) (U009)
-(Disregard below)
+## Remove Button
+| Step | Steps to Reproduce | Expected Behaviour | 
+|------|--------------------|--------------------|
+| 1    | Enter name of course which has been previously added in course name and click Remove button.| Should output success message saying the course has been successfully removed. |
+| 2    | Enter name of course which has not been previously added in course name and click Remove button.| Should output message saying course doesn't exist. |
+| 3    | Enter name of course which has been previously added in course name and click Remove button. And add an integer into the credit hours field. This shouldn't affect the removal process.| Should output success message saying the course has been successfully removed. |
+| 4    | Leave application and then return to update courses page. Enter name of course which has been previously added in course name and click Remove button.| Should output success message saying the course has been successfully removed. |
 
-Step 10: For the remove button only the name of the course must be entered. To test the error checking enter a course which hasn't been entered before and click Remove. It should output a message saying that the course doesn't exist.
 
-Step 11: For testing purposes the remove button is also meant to output the contents og Arraylist holding the courses. Print before removing a course and after to observe that the function is working as described.
+## View Courses Button
 

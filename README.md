@@ -134,7 +134,8 @@ _Yoseph Hassan_ - Remove Course and View Courses User stories.
 During this sprint, I finished up the course removing functionality and started working on the view courses functionality. I then tested that my code implementation works as the requirements described. I provided testing documentation in this gituhub. I updated the product and sprint backlogs in the Trello board and brainstormed new ideas for additional user stories to be added during the remainder of this project. (Yoseph Hassan)
 
 
-_Jean Cestin_ - 
+_Jean Cestin_ - Go over code
+During this spring I just go over evrything look at the code and the test, trying to get more knowledge working on user story. 
 
 _Christopher Delarosa_ - Stopwatch and Break Time User Stories
 

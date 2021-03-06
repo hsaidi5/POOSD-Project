@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class HistoryActivity extends AppCompatActivity
 {
-
+    private Button HistoryCourses;
     private Button back;
 
     @Override
@@ -17,10 +17,21 @@ public class HistoryActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
-
+        configureHistoryCourses();
         configureBackButton();
     }
 
+    //Function to view the History of the Courses
+    private void configurationHistoryCourses(){
+        HistoryCourses = findViewByID(R.id.HistoryCourses);
+        HistoryCourses.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void Onclick(View v){
+                Intent intent = new Intent(ViewCourses.this.HistoryCourses.class);                     startActivity(intent);
+           }
+       });
+  }
+       
     // Function to return to the home page from the History activity
     private void configureBackButton()
     {

@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ViewCourses">
 
+    <!--Button to return to home page from activity-->
     <Button
         android:id="@+id/backFromView"
         android:layout_width="wrap_content"
@@ -18,34 +19,258 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976" />
 
+    <!--Table to display the current enrolled courses-->
     <TableLayout
-        android:id="@+id/currentCourseTable"
-        android:layout_width="346dp"
-        android:layout_height="431dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/updateCourses"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.263">
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Table Heading -->
+
+        <TableRow android:background="@color/colorBlue">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="Course"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="Credit Hours"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="Time Available"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+
+        </TableRow>
+
+        <!-- Table Data -->
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="203dp" />
+            android:id="@+id/r1"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/r1_course"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/r1_cred"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/r1_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
+        </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:id="@+id/r2"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/r2_course"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/r2_cred"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/r2_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
+        </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:id="@+id/r3"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/r3_course"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/r3_cred"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/r3_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
+        </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:id="@+id/r4"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/r4_course"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/r4_cred"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/r4_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/r5"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/r5_course"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/r5_cred"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/r5_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/r6"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/r6_course"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/r6_cred"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/r6_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
+        </TableRow>
+
     </TableLayout>
 
+
+    <!--Button to move to the Update Courses activity-->
     <Button
         android:id="@+id/updateCourses"
         android:layout_width="120dp"

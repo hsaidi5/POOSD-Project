@@ -1,13 +1,3 @@
-/* Last update by: Yoseph Hassan 2/20/2021
-Added ArrayList which stores course names and numbers
-
-Also allows for buttons to add and remove courses from the arraylist data structure
-Still need to allow arraylist to be accessed in different classes and allow for
-a save state of the current items in the arraylist
-
- */
-
-
 package com.mytime;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,15 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class UpdateCourses extends AppCompatActivity
@@ -40,15 +21,18 @@ public class UpdateCourses extends AppCompatActivity
     private EditText cred_hours_textbox;
     private TextView confirm_textview;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_courses);
 
+        // Gets the list of all courses currently enrolled in.
         ArrayList<Course> courses_data_struct = SharedData.getCurrentCourses(this);
         if(courses_data_struct == null)
         {
+            // Creates a new list if there is no current list of courses.
             courses_data_struct = new ArrayList<Course>();
         }
 
@@ -72,10 +56,10 @@ public class UpdateCourses extends AppCompatActivity
             public void onClick(View v)
             {
                 Course c = new Course();
-                String test = course_name_textbox.getText().toString();
-                String test2 = cred_hours_textbox.getText().toString();
+                String courseName = course_name_textbox.getText().toString();
+                String credits = cred_hours_textbox.getText().toString();
                 // If the info they enter isn't correct or non existent
-                if( test.equals("") || test.equals("Course Name") )
+                if( courseName.equals("") || courseName.equals("Course Name") )
                 {
                     confirm_textview.setText("You didn't type anything for Course Name!");
 
@@ -83,22 +67,20 @@ public class UpdateCourses extends AppCompatActivity
 
                 else
                 {
-                    //confirm_textview.setText("Successfully added:"); // debugging process
-                    c.set_name(test);
+                    c.set_name(courseName);
                 }
                 //Check if a valid integer was entered
 
-                if(test2.equals("") || test2.equals("Credit Hours") || test2.equals("0"))
+                if(credits.equals("") || credits.equals("Credit Hours") || credits.equals("0"))
                 {
                     confirm_textview.setText("You didn't type anything for Credit Hours!");
                 }
 
                 else
                 {
-                    //confirm_textview.setText(test2); // debugging purposes
                     try
                     {
-                        int num = Integer.parseInt(test2);
+                        int num = Integer.parseInt(credits);
                         c.set_cred_hours(num);
                     }
 
@@ -142,6 +124,9 @@ public class UpdateCourses extends AppCompatActivity
                         if(courses_data_struct.get(i).get_name().equals(name_tbox))
                         {
                             courses_data_struct.remove(i);
+                            SharedData.clearCourses(getApplicationContext());
+                            SharedData.saveCourses(getApplicationContext(), courses_data_struct);
+
                             confirm_textview.setText("Course: " + name_tbox + " has been successfully removed.");
                         }
 

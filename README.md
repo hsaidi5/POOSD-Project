@@ -164,6 +164,8 @@ _Yoseph Hassan_ -
 
 _Jean Cestin_ -  
 
-_Christopher Delarosa_ - 
+_Christopher Delarosa_ - Time Updating, Automated Test
+
+During this sprint, I implemented the function that calculates the amount of time spent studying in a given study session. It would then deduct this time from the amount of time needed to study for the rest of the week. An automated test has also been made to ensure that this function works correctly. (Christopher Delarosa)
 
 _Pedro Nemalceff_ - 

@@ -162,7 +162,8 @@ During this sprint, I implemented the function that calculates how much time is 
 
 _Yoseph Hassan_ - 
 
-_Jean Cestin_ -  
+_Jean Cestin_ - Courses History
+During this sprint I implemented the function to view the course history. 
 
 _Christopher Delarosa_ - Time Updating, Automated Test
 

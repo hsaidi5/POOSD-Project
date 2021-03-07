@@ -27,6 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/start_timer"
+        app:backgroundTint="#3097CA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,6 +39,7 @@
         android:layout_width="86dp"
         android:layout_height="43dp"
         android:text="@string/back"
+        app:backgroundTint="#3097CA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.116"
@@ -66,6 +68,7 @@
         android:layout_marginBottom="73dp"
         android:enabled="false"
         android:text="@string/pause"
+        app:backgroundTint="#3097CA"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/selectCourse"
         app:layout_constraintEnd_toStartOf="@+id/startTimer"
@@ -82,6 +85,7 @@
         android:layout_marginBottom="73dp"
         android:enabled="false"
         android:text="@string/stop"
+        app:backgroundTint="#3097CA"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/selectCourse"
         app:layout_constraintEnd_toEndOf="parent"
@@ -104,6 +108,7 @@
             android:layout_width="125dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            app:backgroundTint="#3097CA"
             android:text="+50 Seconds" />
 
         <Button
@@ -111,6 +116,7 @@
             android:layout_width="112dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            app:backgroundTint="#3097CA"
             android:text="+14 Minutes" />
 
     </LinearLayout>

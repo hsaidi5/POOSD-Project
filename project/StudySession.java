@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -13,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import java.util.ArrayList;
 import java.util.Locale;
 
 public class StudySession extends AppCompatActivity
@@ -25,26 +27,29 @@ public class StudySession extends AppCompatActivity
     private Button advMins;
     private Button advSecs;
 
-    private Spinner enrolledClasses;
+    private Spinner courseSpinner;
 
     private int seconds = 0;
     private int minutes = 0;
     private int secs = 0;
 
+    private String currentClass = "";
+
     private boolean running;
     private boolean onBreak = false;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_study_session);
 
-        setupDropdownList();
+        ArrayList<Course> enrolledCourses = SharedData.getCurrentCourses(this);
+
+        setupDropdownList(enrolledCourses);
         configureBackButton();
         configureStartButton();
         configurePauseButton();
-        configureStopButton();
+        configureStopButton(enrolledCourses);
 
         configureAdvMinutesButton();
         configureAdvSecondsButton();
@@ -52,38 +57,51 @@ public class StudySession extends AppCompatActivity
         runTimer();
     }
 
-    // Initializes the dropdown list the user uses to select the current course they are working on
-    private void setupDropdownList()
+    // Dropdown list that displays the list of courses.
+    private void setupDropdownList(ArrayList<Course> enrolledCourses)
     {
-        enrolledClasses = (Spinner) findViewById(R.id.selectCourse);
-        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(StudySession.this, android.R.layout.simple_list_item_1,
-                getResources().getStringArray(R.array.courses));
-        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        enrolledClasses.setAdapter(myAdapter);
+        courseSpinner = (Spinner) findViewById(R.id.selectCourse);
+        ArrayList<String> classNames = new ArrayList<String>();
 
-        enrolledClasses.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
+        for (int i = 0; i < enrolledCourses.size(); i++)
         {
+            if (i == 0)
+                classNames.add("Select Course");
+
+            classNames.add(new String(enrolledCourses.get(i).get_name()));
+        }
+
+        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(StudySession.this, android.R.layout.simple_list_item_1,
+                classNames);
+
+        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        courseSpinner.setAdapter(myAdapter);
+
+        // Button to start timer is disabled if the user doesn't have a course selected.
+        courseSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
             {
                 if (position == 0)
                 {
                     start.setEnabled(false);
-                }else
+                }
+                else
                 {
                     start.setEnabled(true);
+                    currentClass = classNames.get(position);
                 }
-
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> parent)
-            {
+            public void onNothingSelected(AdapterView<?> parent) {
                 return;
             }
+
         });
     }
 
+    // Button for testing purposes. Advances stopwatch 14 minutes.
     private void configureAdvMinutesButton()
     {
         advMins = findViewById(R.id.advMinutes);
@@ -98,6 +116,7 @@ public class StudySession extends AppCompatActivity
         });
     }
 
+    // Button for testing purposes. Advances stopwatch 50 seconds.
     private void configureAdvSecondsButton()
     {
         advSecs = findViewById(R.id.advSeconds);
@@ -112,7 +131,7 @@ public class StudySession extends AppCompatActivity
         });
     }
 
-    // Function to return back to the home page from the Study Session activity
+    // Sends the user back to the starting screen.
     private void configureBackButton()
     {
         back = findViewById(R.id.backFromStudy);
@@ -127,7 +146,7 @@ public class StudySession extends AppCompatActivity
         });
     }
 
-    // Implemented by Christopher Delarosa
+    // Begins the stopwatch.
     private void configureStartButton()
     {
         start = findViewById(R.id.startTimer);
@@ -136,6 +155,7 @@ public class StudySession extends AppCompatActivity
 
         start.setOnClickListener(new View.OnClickListener()
         {
+            // Disable start button and take it from view, then display the Pause and Stop buttons.
             @Override
             public void onClick(View v)
             {
@@ -147,17 +167,19 @@ public class StudySession extends AppCompatActivity
                 stop.setEnabled(true);
                 stop.setVisibility(View.VISIBLE);
 
-                enrolledClasses.setEnabled(false);
+                courseSpinner.setEnabled(false);
             }
         });
     }
 
+    // Pauses or continues the stopwatch.
     private void configurePauseButton()
     {
         pause = findViewById(R.id.pause);
 
         pause.setOnClickListener(new View.OnClickListener()
         {
+            // Switch text on button depending on whether the user wants to pause or resume.
             @Override
             public void onClick(View v)
             {
@@ -175,7 +197,8 @@ public class StudySession extends AppCompatActivity
         });
     }
 
-    private void configureStopButton()
+    // Stops the stopwatch and resets the display.
+    private void configureStopButton(ArrayList<Course> enrolledCourses)
     {
         stop = findViewById(R.id.stop);
 
@@ -185,8 +208,8 @@ public class StudySession extends AppCompatActivity
             public void onClick(View v)
             {
                 running = false;
-                // Code to upload time spent studying to HistoryActivity should be placed here
 
+                update_hours_remaining(enrolledCourses);
                 stop.setVisibility(View.GONE);
                 pause.setVisibility(View.GONE);
                 start.setVisibility(View.VISIBLE);
@@ -195,14 +218,14 @@ public class StudySession extends AppCompatActivity
                 pause.setEnabled(false);
                 start.setEnabled(true);
 
-                enrolledClasses.setEnabled(true);
+                courseSpinner.setEnabled(true);
 
                 seconds = 0;
             }
         });
     }
 
-    // Implemented by Christopher Delarosa
+    // Manages the formatting for the stopwatch display, if it's currently running.
     private void runTimer()
     {
         final EditText timeText = findViewById(R.id.editTextTime);
@@ -220,6 +243,7 @@ public class StudySession extends AppCompatActivity
 
                 timeText.setText(time);
 
+                // Tell the user to take a study break every 15 minutes.
                 if (minutes != 0 && minutes % 15 == 0 && onBreak == false)
                 {
                     onBreak = true;
@@ -231,29 +255,50 @@ public class StudySession extends AppCompatActivity
                 if (running)
                     seconds++;
 
+                // Update the stopwatch every second while running.
                 handler.postDelayed(this, 1000);
             }
         });
     }
 
-    // Function to alert user when to take a break
+    // Programmed break, set to go off every 15 minutes.
     private void startBreak()
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(StudySession.this);
 
+        // Pause the stopwatch and display a dialog box.
         pause.performClick();
         builder.setTitle("It's time for a break!");
         builder.setCancelable(false);
-        builder.setNeutralButton("OK", new DialogInterface.OnClickListener()
-        {
+        builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which)
-            {
+            public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();
             }
         });
 
         AlertDialog breakDialog = builder.create();
         breakDialog.show();
+    }
+
+    // Code to deduct the amount of time spent studying from the amount of time remaining.
+    private void update_hours_remaining(ArrayList<Course> enrolledCourses)
+    {
+        double timeSpent = (seconds / 60.0) + (seconds / 3600.0);
+        timeSpent = Math.floor(timeSpent * 100) / 100;
+
+        for (int i = 0; i < enrolledCourses.size(); i++)
+        {
+            if (enrolledCourses.get(i).get_name().equals(currentClass))
+            {
+                double starting = enrolledCourses.get(i).get_time_available();
+                enrolledCourses.get(i).set_time_available(starting - timeSpent);
+
+                if (enrolledCourses.get(i).get_time_available() < 0)
+                {
+                    enrolledCourses.get(i).set_time_available(0);
+                }
+            }
+        }
     }
 }

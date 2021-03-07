@@ -160,7 +160,9 @@ _Hasan Assaidi_ - Time Availablility, Automated Test, and Demonstration
 
 During this sprint, I implemented the function that calculates how much time is available for the user to spend studying on each course every week based on its respective credit hours. I also created an automated test in order to make sure that the function works correctly. In addition, I created the demonstration to show the new features we have completed during sprint 5. (Hasan Assaidi)
 
-_Yoseph Hassan_ - 
+_Yoseph Hassan_ - View courses functionality
+
+During this sprint, I focus on incorporating the view courses functionality of the application. This is one of the cornerstones of the project as it allows for the users to see the courses they have added and see the associated credit hours as well as time remaining. I also designed tests which would comprehensively test the functionality of the code. (Yoseph Hassan)
 
 _Jean Cestin_ - Courses History
 

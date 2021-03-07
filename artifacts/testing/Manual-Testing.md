@@ -90,6 +90,23 @@
 | 6    | Launch application on mobile device/emulator again. | Home page/main activity is showing on device. |
 | 7    | Click on the view courses button. | View courses page. |
 | 8    | Click on the update courses button. | Update courses page. |
-| 9    | Enter the name of the course previously entered in step 4. | Should output success message saying the course has been successfully removed (Would normally say the course does not exist if the course info was not saved). |
+| 9    | Enter the name of the course previously entered in step 4. and click Remove button.| Should output success message saying the course has been successfully removed (Would normally say the course does not exist if the course info was not saved). |
+
+
+## View Courses (U013)
+
+| Step | Steps to Reproduce | Expected Behaviour | 
+|------|--------------------|--------------------|
+| 1    | Launch application on mobile device/emulator. | Home page/main activity is showing on device. |
+| 2    | Click on the view courses button. | View courses page with blank spaces for course name, credit hours, and time remaining. |
+| 3    | Click on the update courses button. | Update courses page. |
+| 4    | Enter a sample name of a course in course name and click Add button.| Should output success message saying the course has been successfully added. |
+| 5    | Click back button.| Should return user to the mother page containing information regarding courses which have been added. If done successfully the course which has been added should in a table with all of its relevant information.|
+| 6    | Enter the name of the course previously entered in step 4. and click Remove button.| Should output success message saying the course has been successfully removed. |
+| 7    | Click on the view courses button. | View courses page with blank spaces for course name, credit hours, and time remaining. This reflects the dynamic properties of the view courses page. |
+
+
+
+
 
 

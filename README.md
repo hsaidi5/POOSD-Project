@@ -172,4 +172,6 @@ _Christopher Delarosa_ - Time Updating, Automated Test
 
 During this sprint, I implemented the function that calculates the amount of time spent studying in a given study session. It would then deduct this time from the amount of time needed to study for the rest of the week. An automated test has also been made to ensure that this function works correctly. (Christopher Delarosa)
 
-_Pedro Nemalceff_ - 
+_Pedro Nemalceff_ - Start Timer 
+
+During this sprint, I implemented the function that displays the date and time when a user starts working. This is triggered from starting the timer in a study session. This is so the user can keep track of time spent each class.

@@ -11,23 +11,23 @@
         android:id="@+id/editTextTime"
         android:layout_width="117dp"
         android:layout_height="69dp"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="time"
+        android:selectAllOnFocus="true"
         android:text="@string/timer"
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/startTimer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.727"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="0.727" />
 
     <Button
         android:id="@+id/startTimer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/start_timer"
-        app:backgroundTint="#3097CA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +39,6 @@
         android:layout_width="86dp"
         android:layout_height="43dp"
         android:text="@string/back"
-        app:backgroundTint="#3097CA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.116"
@@ -68,7 +67,6 @@
         android:layout_marginBottom="73dp"
         android:enabled="false"
         android:text="@string/pause"
-        app:backgroundTint="#3097CA"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/selectCourse"
         app:layout_constraintEnd_toStartOf="@+id/startTimer"
@@ -85,7 +83,6 @@
         android:layout_marginBottom="73dp"
         android:enabled="false"
         android:text="@string/stop"
-        app:backgroundTint="#3097CA"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/selectCourse"
         app:layout_constraintEnd_toEndOf="parent"
@@ -108,7 +105,6 @@
             android:layout_width="125dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:backgroundTint="#3097CA"
             android:text="+50 Seconds" />
 
         <Button
@@ -116,7 +112,6 @@
             android:layout_width="112dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:backgroundTint="#3097CA"
             android:text="+14 Minutes" />
 
     </LinearLayout>
@@ -132,5 +127,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/selectCourse"
         app:layout_constraintVertical_bias="0.905" />
+
+    <TextView
+        android:id="@+id/startingTime"
+        android:layout_width="157dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="32dp"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="102dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginBottom="7dp"
+        android:text="Starting Time:"
+        app:layout_constraintBottom_toBottomOf="@+id/startingTime"
+        app:layout_constraintEnd_toStartOf="@+id/startingTime" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

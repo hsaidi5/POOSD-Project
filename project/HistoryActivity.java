@@ -11,14 +11,29 @@ public class HistoryActivity extends AppCompatActivity
 {
 
     private Button back;
+    private Button HistoryCourses;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
-
+        
+        configureHistoryCourses();
         configureBackButton();
+    }
+    
+    //Function to view the History of the Courses
+    private void configurationHistoryCourses(){
+         HistoryCourses = findViewByID(R.id.HistoryCourses);
+         HistoryCourses.setOnClickListener(new View.OnClickListener(){
+         
+             @Override
+             public void OnClick(View v){
+                 Intent intent = new Intent(ViewCourses.this.HistoryCourses.class);
+                 startActivity(intent);
+             }
+         });
     }
 
     // Function to return to the home page from the History activity

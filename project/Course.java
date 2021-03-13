@@ -56,7 +56,16 @@ public class Course
 
     public boolean get_comp_stat()
     {
-        return this.completion_stat;
+        if(time_available <= 0)
+        {
+            return this.completion_stat = true;
+        }
+
+        else
+        {
+            return this.completion_stat = false;
+        }
+        //return this.completion_stat;
     }
 
 }

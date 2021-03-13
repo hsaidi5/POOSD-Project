@@ -146,6 +146,7 @@ public class ViewCourses extends AppCompatActivity
                 comp_arr[i].setBackgroundColor(Color.parseColor("#FF0000"));
                 comp_arr[i].setText("Incomplete");
                 comp_arr[i].setTextColor(Color.parseColor("#FFFFFF"));
+                courses_data_struct.get(i).set_comp_stat(false);
             }
         }
     }

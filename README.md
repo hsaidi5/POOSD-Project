@@ -190,7 +190,9 @@ During this sprint, I implemented the function that displays the date and time w
 
 _Hasan Assaidi_ - 
 
-_Yoseph Hassan_ - 
+_Yoseph Hassan_ - Completion Status Functionality
+
+During this sprint, I was in charge of implmenting the hours completion status functionality within the view courses page. This functionality allows for users to easily see whether or not they have completed the required amount of hours towards their respective courses. In addition to this I also desgined an automated test concerning the view courses page in order to make sure it is running as expected.
 
 _Jean Cestin_ - 
 

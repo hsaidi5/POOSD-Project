@@ -175,3 +175,26 @@ During this sprint, I implemented the function that calculates the amount of tim
 _Pedro Nemalceff_ - Start Timer 
 
 During this sprint, I implemented the function that displays the date and time when a user starts working. This is triggered from starting the timer in a study session. This is so the user can keep track of time spent each class.
+
+# Sprint 6
+
+- [Trello Board (Backlogs and Requirements)](https://trello.com/b/KJKknr6O/project-task-board)
+- [Burndown Chart](https://docs.google.com/spreadsheets/d/12tdoDcIdkjIooK6anzd5tF59lHYUTzUjkSDbxJay16k/edit#gid=615202083)
+- [Velocity Chart](https://docs.google.com/spreadsheets/d/12s2MgZycmOZ50Mo1SNa9Wc9LwtmNB-iMbmJFyHv1GJs/edit#gid=0)
+- [System Architecture](https://github.com/hsaidi5/POOSD-Project/blob/master/artifacts/architechture.md)
+- [Source Code](https://github.com/hsaidi5/POOSD-Project/tree/master/project)
+- [Tests](https://github.com/hsaidi5/POOSD-Project/tree/master/artifacts/testing)
+- [Demonstration]()
+
+## Task Allocation
+
+_Hasan Assaidi_ - 
+
+_Yoseph Hassan_ - 
+
+_Jean Cestin_ - 
+
+_Christopher Delarosa_ - 
+
+_Pedro Nemalceff_ - 
+

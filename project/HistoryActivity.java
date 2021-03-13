@@ -21,6 +21,7 @@ public class HistoryActivity extends AppCompatActivity
         configureBackButton();
     }
 
+    // Function to return to the home page from the History activity
     private void configureBackButton()
     {
         back = findViewById(R.id.backFromHistory);

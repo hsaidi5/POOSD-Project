@@ -1,21 +1,15 @@
 package com.mytime;
 
-import java.util.*;
-import java.io.*;
+
 import java.lang.*;
-import java.time.format.DateTimeFormatter;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
-//import java.awt.*;
-//import java.awt.event.*;
-import java.time.LocalDateTime;
+
 
 public class Course
 {
     private String name = "";
     private int cred_hours = 0;
+    private double time_available = 0.0;
+    private boolean completion_stat = false;
 
     public void set_name(String str)
     {
@@ -27,6 +21,22 @@ public class Course
     {
 
         this.cred_hours = hours;
+
+        // calculating time available (in minutes) to study based on the number of credit hours
+        double time = (hours * 3) * 60;
+        // subtracting 180 minutes from overall time to account for the lectures and labs (on average about 3 hours total)
+        double time_after_lectures = time - 180;
+        this.time_available = time_after_lectures;
+    }
+
+    public void set_comp_stat(boolean comp)
+    {
+        this.completion_stat = comp;
+    }
+
+    public void set_time_available(double time)
+    {
+        this.time_available = time;
     }
 
     public int get_cred_hours()
@@ -37,6 +47,16 @@ public class Course
     public String get_name()
     {
         return this.name;
+    }
+
+    public double get_time_available()
+    {
+        return this.time_available;
+    }
+
+    public boolean get_comp_stat()
+    {
+        return this.completion_stat;
     }
 
 }

@@ -92,7 +92,7 @@ public class UpdateCourses extends AppCompatActivity
 
                 if(c.get_cred_hours() != 0 && !(c.get_name().equals("")))
                 {
-                    confirm_textview.setText("Successfully added: " + c.get_name() + " with credit hours: " + c.get_cred_hours());
+                    confirm_textview.setText("Successfully added: " + c.get_name() + " with credit hours: " + c.get_cred_hours() + " with time available: "+ c.get_time_available() + " minutes");
                     courses_data_struct.add(c);
                     SharedData.saveCourses(getApplicationContext(), courses_data_struct);
                 }

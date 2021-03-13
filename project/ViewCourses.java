@@ -3,6 +3,7 @@ package com.mytime;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -50,6 +51,15 @@ public class ViewCourses extends AppCompatActivity
     private TextView r5_time_text;
     private TextView r6_time_text;
 
+    //Completion status cells
+    private TextView r1_comp_text;
+    private TextView r2_comp_text;
+    private TextView r3_comp_text;
+    private TextView r4_comp_text;
+    private TextView r5_comp_text;
+    private TextView r6_comp_text;
+
+
 
 
 
@@ -64,6 +74,13 @@ public class ViewCourses extends AppCompatActivity
 
         configureUpdateCourses();
         configureBackButton();
+
+        r1 = (TableRow) findViewById(R.id.r1);
+        r2 = (TableRow) findViewById(R.id.r2);
+        r3 = (TableRow) findViewById(R.id.r3);
+        r4 = (TableRow) findViewById(R.id.r4);
+        r5 = (TableRow) findViewById(R.id.r5);
+        r6 = (TableRow) findViewById(R.id.r6);
 
         r1_course_text = (TextView) findViewById(R.id.r1_course);
         r2_course_text = (TextView) findViewById(R.id.r2_course);
@@ -86,12 +103,14 @@ public class ViewCourses extends AppCompatActivity
         r5_time_text = (TextView) findViewById(R.id.r5_time);
         r6_time_text = (TextView) findViewById(R.id.r6_time);
 
-        r1 = (TableRow) findViewById(R.id.r1);
-        r2 = (TableRow) findViewById(R.id.r2);
-        r3 = (TableRow) findViewById(R.id.r3);
-        r4 = (TableRow) findViewById(R.id.r4);
-        r5 = (TableRow) findViewById(R.id.r5);
-        r6 = (TableRow) findViewById(R.id.r6);
+        r1_comp_text = (TextView) findViewById(R.id.r1_comp);
+        r2_comp_text = (TextView) findViewById(R.id.r2_comp);
+        r3_comp_text = (TextView) findViewById(R.id.r3_comp);
+        r4_comp_text = (TextView) findViewById(R.id.r4_comp);
+        r5_comp_text = (TextView) findViewById(R.id.r5_comp);
+        r6_comp_text = (TextView) findViewById(R.id.r6_comp);
+
+
 
 
         int array_list_size = courses_data_struct.size();
@@ -100,6 +119,8 @@ public class ViewCourses extends AppCompatActivity
         TextView[] course_arr = {r1_course_text, r2_course_text, r3_course_text, r4_course_text, r5_course_text, r6_course_text};
         TextView[] cred_arr = {r1_cred_text, r2_cred_text, r3_cred_text, r4_cred_text, r5_cred_text, r6_cred_text};
         TextView[] time_arr = {r1_time_text, r2_time_text, r3_time_text, r4_time_text, r5_time_text, r6_time_text};
+        TextView[] comp_arr = {r1_comp_text, r2_comp_text, r3_comp_text, r4_comp_text, r5_comp_text, r6_comp_text};
+
 
         makevisible(array_list_size, row_arr);
 
@@ -108,8 +129,25 @@ public class ViewCourses extends AppCompatActivity
             course_arr[i].setText(courses_data_struct.get(i).get_name());
             String credits = Integer.toString(courses_data_struct.get(i).get_cred_hours());
             cred_arr[i].setText(credits);
-        }
+            Double time_aval = courses_data_struct.get(i).get_time_available();
+            String time = Double.toString(time_aval);
+            time_arr[i].setText(time);
 
+            if(time_aval <= 0)
+            {
+                comp_arr[i].setBackgroundColor(Color.parseColor("#00FF00"));
+                comp_arr[i].setText("Complete");
+                comp_arr[i].setTextColor(Color.parseColor("#000000"));
+                courses_data_struct.get(i).set_comp_stat(true);
+            }
+
+            else
+            {
+                comp_arr[i].setBackgroundColor(Color.parseColor("#FF0000"));
+                comp_arr[i].setText("Incomplete");
+                comp_arr[i].setTextColor(Color.parseColor("#FFFFFF"));
+            }
+        }
     }
 
     private void makevisible(int size, TableRow[] row_arr)

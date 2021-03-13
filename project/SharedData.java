@@ -18,7 +18,7 @@ public class SharedData
     public static void saveCourses(Context context, ArrayList<Course> courses)
     {
         SharedPreferences courseInfo = PreferenceManager.getDefaultSharedPreferences(context);
-        //SharedPreferences courseInfo = context.getSharedPreferences(MY_PREFERENCE_NAME, Context.MODE_PRIVATE);
+        //SharedPreferences courseInfo = context.getSharedPreferences(MY_PREFERENCE_NAME, Context.MODE_PRIVATE); // testing purposes
         SharedPreferences.Editor editor = courseInfo.edit();
         Gson gson = new Gson();
         String json = gson.toJson(courses);
@@ -29,7 +29,7 @@ public class SharedData
     public static ArrayList<Course> getCurrentCourses(Context context)
     {
         SharedPreferences courseInfo = PreferenceManager.getDefaultSharedPreferences(context);
-        //SharedPreferences courseInfo = context.getSharedPreferences(MY_PREFERENCE_NAME, Context.MODE_PRIVATE);
+        //SharedPreferences courseInfo = context.getSharedPreferences(MY_PREFERENCE_NAME, Context.MODE_PRIVATE); // testing purposes
         Gson gson = new Gson();
         String json = courseInfo.getString(COURSES_KEY, "");
 

@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!--Button to move to the Study Session activity-->
     <Button
         android:id="@+id/studySession"
         android:layout_width="197dp"
@@ -19,6 +20,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.866" />
 
+    <!--Button to move to View Courses activity-->
     <Button
         android:id="@+id/viewCourses"
         android:layout_width="197dp"
@@ -31,6 +33,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.895" />
 
+    <!--Button to move to History activity-->
     <Button
         android:id="@+id/history"
         android:layout_width="197dp"
@@ -43,6 +46,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.786" />
 
+    <!--Name of application label-->
     <TextView
         android:id="@+id/heading"
         android:layout_width="141dp"

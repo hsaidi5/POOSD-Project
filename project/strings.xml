@@ -5,6 +5,13 @@
         <item>Sample 1</item>
         <item>Sample 2</item>
     </string-array>
+    <string-array name="break_activities">
+        <item>Try doing a few stretches.</item>
+        <item>You should get something to drink.</item>
+        <item>Take a deep breath and relax for a bit.</item>
+        <item>Get up and walk around for a little bit. Clear your head.</item>
+        <item>Go ahead and watch a YouTube video.</item>
+    </string-array>
     <string name="new_study_session">New Study Session</string>
     <string name="updateCourses">Update Courses</string>
     <string name="historyButton">History</string>

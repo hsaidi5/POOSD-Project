@@ -198,5 +198,6 @@ _Jean Cestin_ -
 
 _Christopher Delarosa_ - 
 
-_Pedro Nemalceff_ - 
+_Pedro Nemalceff_ - Level of Importance
 
+During this sprint, I was in charge of implementing a way for the user to be able to set the importance of a course on an individual basis. I ended up modifying how we add a course on the update courses page. I added an extra field to the class object we store the class data in.

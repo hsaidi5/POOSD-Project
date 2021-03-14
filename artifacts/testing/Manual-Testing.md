@@ -51,7 +51,7 @@
 | 8    | Click on the "Stop" button. | The clock should come to a stop, and soon be reset. The pause and stop buttons will disappear from view, and be replaced with the start button. The dropdown menu should also be re-enabled. |
 
 
-## "Break Time" Notification (U003)
+## "Break Time" Notification & Activity Message (U003 & U020)
 
 | Step | Steps to Reproduce | Expected Behaviour | 
 |------|--------------------|--------------------|
@@ -60,9 +60,9 @@
 | 3    | Select one of the existing/sample courses from the dropdown menu. | This should enable the button to start the timer. |
 | 4    | Click on the "Start Timer" button. | The clock should begin counting. The start button should also disappear from view, and be replaced with the pause and stop buttons. The dropdown menu where the courses have been selected from should also be disabled. |
 | 5    | Click on the "+14 Minutes" and "+50 Seconds" Buttons | The clock should advance upwards accordingly. |
-| 6    | Wait for the clock to reach 15 minutes. | The clock should pause, and a dialog box should appear on screen. |
+| 6    | Wait for the clock to reach 15 minutes. | The clock should pause, and a dialog box should appear on screen with a generated message. |
 | 7    | Click on the "OK" button in the doalig box. | The dialog box should disappear. |
-| 8    | Repeat Step 5. | The dialog box is currently set to appear in 15 minute intervals. Once the clock reaches 30 minutes, the dialog box should reappear. |
+| 8    | Repeat Step 5. | The dialog box is currently set to appear in 15 minute intervals. Once the clock reaches 30 minutes, the dialog box should reappear, hopefully with a different message. |
 
 
 ## Remove Button (U009)

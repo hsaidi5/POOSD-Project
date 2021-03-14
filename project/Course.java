@@ -9,11 +9,17 @@ public class Course
     private String name = "";
     private int cred_hours = 0;
     private double time_available = 0.0;
+    private String level_of_importance = "";
 
     public void set_name(String str)
     {
-
         this.name = str;
+    }
+
+    //Added by Pedro Nemalceff
+    public void set_importance_level(String str)
+    {
+        this.level_of_importance = str;
     }
 
     public void set_cred_hours(int hours)
@@ -41,6 +47,12 @@ public class Course
     public String get_name()
     {
         return this.name;
+    }
+
+    //Added by Pedro Nemalceff
+    public String get_level_of_importance()
+    {
+        return this.level_of_importance;
     }
 
     public double get_time_available()

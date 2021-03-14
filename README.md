@@ -196,7 +196,9 @@ During this sprint, I was in charge of implmenting the hours completion status f
 
 _Jean Cestin_ - 
 
-_Christopher Delarosa_ - 
+_Christopher Delarosa_ - Break Time Activity Messages
+
+During this sprint, I added additional functionality to the "study break" function. Drawing from a given set of strings as part of the app's resources, the dialog box that appears during study breaks now displays a suggested activity for the user to perform. These activities are chosen at random, and have the potential to suggest a new activity to users each time they take a study break. One of the manual tests have also been edited to accomodate this implementation.
 
 _Pedro Nemalceff_ - Level of Importance
 

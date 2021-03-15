@@ -15,9 +15,10 @@
         app:backgroundTint="#3097CA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/removeCourse"
-        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintHorizontal_bias="0.765"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.67" />
 
     <!--Button to remove the course entered by the user-->
     <Button
@@ -28,10 +29,10 @@
         app:backgroundTint="#3097CA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.683"
+        app:layout_constraintHorizontal_bias="0.678"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.67" />
 
     <!--EditText to input the credit hours-->
     <EditText
@@ -79,14 +80,24 @@
         app:layout_constraintVertical_bias="0.95" />
 
     <!--TextView to display the confirmation of adding or removing a course-->
+
     <TextView
         android:id="@+id/confirmation"
-        android:layout_width="340dp"
-        android:layout_height="52dp"
+        android:layout_width="322dp"
+        android:layout_height="68dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.676" />
+        app:layout_constraintVertical_bias="0.82" />
+
+    <Spinner
+        android:id="@+id/selectLevelOfImportance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
+        app:layout_constraintEnd_toEndOf="@+id/courseNumber"
+        app:layout_constraintStart_toStartOf="@+id/courseNumber"
+        app:layout_constraintTop_toTopOf="@+id/courseNumber" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,6 +16,7 @@ import android.widget.Spinner;
 
 import java.util.ArrayList;
 import java.util.Locale;
+import java.util.Random;
 
 public class StudySession extends AppCompatActivity
 {
@@ -34,6 +35,7 @@ public class StudySession extends AppCompatActivity
     private int secs = 0;
 
     private String currentClass = "";
+    private String msg = "";
 
     private boolean running;
     private boolean onBreak = false;
@@ -57,6 +59,7 @@ public class StudySession extends AppCompatActivity
         runTimer();
     }
 
+    // Implemented by Christopher Delarosa.
     // Dropdown list that displays the list of courses.
     private void setupDropdownList(ArrayList<Course> enrolledCourses)
     {
@@ -101,6 +104,7 @@ public class StudySession extends AppCompatActivity
         });
     }
 
+    // Implemented by Christopher Delarosa.
     // Button for testing purposes. Advances stopwatch 14 minutes.
     private void configureAdvMinutesButton()
     {
@@ -116,6 +120,7 @@ public class StudySession extends AppCompatActivity
         });
     }
 
+    // Implemented by Christopher Delarosa.
     // Button for testing purposes. Advances stopwatch 50 seconds.
     private void configureAdvSecondsButton()
     {
@@ -131,6 +136,7 @@ public class StudySession extends AppCompatActivity
         });
     }
 
+    // Implemented by Christopher Delarosa.
     // Sends the user back to the starting screen.
     private void configureBackButton()
     {
@@ -146,6 +152,7 @@ public class StudySession extends AppCompatActivity
         });
     }
 
+    // Implemented by Christopher Delarosa.
     // Begins the stopwatch.
     private void configureStartButton()
     {
@@ -172,6 +179,7 @@ public class StudySession extends AppCompatActivity
         });
     }
 
+    // Implemented by Christopher Delarosa.
     // Pauses or continues the stopwatch.
     private void configurePauseButton()
     {
@@ -197,6 +205,7 @@ public class StudySession extends AppCompatActivity
         });
     }
 
+    // Implemented by Christopher Delarosa.
     // Stops the stopwatch and resets the display.
     private void configureStopButton(ArrayList<Course> enrolledCourses)
     {
@@ -229,6 +238,7 @@ public class StudySession extends AppCompatActivity
         });
     }
 
+    // Implemented by Christopher Delarosa.
     // Manages the formatting for the stopwatch display, if it's currently running.
     private void runTimer()
     {
@@ -265,15 +275,23 @@ public class StudySession extends AppCompatActivity
         });
     }
 
+    // Implemented by Christopher Delarosa.
     // Programmed break, set to go off every 15 minutes.
     private void startBreak()
     {
+        // Determines what activity will be displayed in the upcoming dialog box.
+        Random rand = new Random();
+        String breakArray[] = getResources().getStringArray(R.array.break_activities);
+        int index = rand.nextInt(breakArray.length);
+        msg = breakArray[index];
         AlertDialog.Builder builder = new AlertDialog.Builder(StudySession.this);
 
         // Pause the stopwatch and display a dialog box.
         pause.performClick();
         builder.setTitle("It's time for a break!");
         builder.setCancelable(false);
+        builder.setMessage(msg);
+
         builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -285,6 +303,7 @@ public class StudySession extends AppCompatActivity
         breakDialog.show();
     }
 
+    // Implemented by Christopher Delarosa.
     // Code to deduct the amount of time spent studying from the amount of time remaining.
     private void update_hours_remaining(ArrayList<Course> enrolledCourses)
     {

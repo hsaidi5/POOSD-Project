@@ -210,6 +210,10 @@ public class StudySession extends AppCompatActivity
                 running = false;
 
                 update_hours_remaining(enrolledCourses);
+
+                SharedData.clearCourses(getApplicationContext());
+                SharedData.saveCourses(getApplicationContext(), enrolledCourses);
+
                 stop.setVisibility(View.GONE);
                 pause.setVisibility(View.GONE);
                 start.setVisibility(View.VISIBLE);

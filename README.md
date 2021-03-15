@@ -184,11 +184,13 @@ During this sprint, I implemented the function that displays the date and time w
 - [System Architecture](https://github.com/hsaidi5/POOSD-Project/blob/master/artifacts/architechture.md)
 - [Source Code](https://github.com/hsaidi5/POOSD-Project/tree/master/project)
 - [Tests](https://github.com/hsaidi5/POOSD-Project/tree/master/artifacts/testing)
-- [Demonstration]()
+- [Demonstration](https://www.youtube.com/watch?v=_ZiNcKL9wrA)
 
 ## Task Allocation
 
-_Hasan Assaidi_ - 
+_Hasan Assaidi_ - Duplicate Course Prevention, Refresh of View Courses Screen, and Demonstration
+
+During this sprint, I implemented a way for the program to prevent the user from adding a duplicate course. This will also cause a warning message to appear on the screen to alret the user of the attempt to add a duplicate course. I also worked on a way to refresh the view courses screen after leaving the update courses screen. While I have completed most of this user story, I am still working to fix a couple of bugs found while testing. In addition, I created a couple of automated tests that were once manual tests. I also created the demonstration of the product after completing sprint 6.
 
 _Yoseph Hassan_ - Completion Status Functionality
 

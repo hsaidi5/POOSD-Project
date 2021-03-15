@@ -81,8 +81,8 @@
     <!--TextView to display the confirmation of adding or removing a course-->
     <TextView
         android:id="@+id/confirmation"
-        android:layout_width="320dp"
-        android:layout_height="29dp"
+        android:layout_width="340dp"
+        android:layout_height="52dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"

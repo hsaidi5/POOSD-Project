@@ -21,8 +21,8 @@
 
     <!--Table to display the current enrolled courses-->
     <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="411dp"
+        android:layout_height="325dp"
         android:layout_margin="40dp"
         android:background="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/updateCourses"
@@ -64,6 +64,16 @@
                 android:textColor="@android:color/white"
                 android:textSize="14sp" />
 
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="Completion Status"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
 
         </TableRow>
 
@@ -100,6 +110,16 @@
                 android:padding="10sp"
                 android:textSize="12sp" />
 
+            <TextView
+                android:id="@+id/r1_comp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
+
         </TableRow>
 
         <TableRow
@@ -133,6 +153,17 @@
                 android:padding="10sp"
                 android:textSize="12sp" />
 
+            <TextView
+                android:id="@+id/r2_comp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp"
+                />
+
+
         </TableRow>
 
         <TableRow
@@ -159,6 +190,15 @@
 
             <TextView
                 android:id="@+id/r3_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/r3_comp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
@@ -199,6 +239,15 @@
                 android:padding="10sp"
                 android:textSize="12sp" />
 
+            <TextView
+                android:id="@+id/r4_comp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
         </TableRow>
 
         <TableRow
@@ -225,6 +274,15 @@
 
             <TextView
                 android:id="@+id/r5_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/r5_comp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
@@ -265,6 +323,15 @@
                 android:padding="10sp"
                 android:textSize="12sp" />
 
+            <TextView
+                android:id="@+id/r6_comp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
         </TableRow>
 
     </TableLayout>
@@ -281,4 +348,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.825" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        app:constraint_referenced_ids="null" />
 </androidx.constraintlayout.widget.ConstraintLayout>

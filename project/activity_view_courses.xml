@@ -371,6 +371,7 @@
         android:layout_height="wrap_content"
         app:barrierDirection="left" />
 
+    <!--
     <Button
         android:id="@+id/refreshButton"
         android:layout_width="wrap_content"
@@ -381,6 +382,5 @@
         app:layout_constraintHorizontal_bias="0.948"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
-    <!--app:constraint_referenced_ids="null"-->
+        app:layout_constraintVertical_bias="0.976" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>

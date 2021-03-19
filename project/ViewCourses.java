@@ -19,7 +19,6 @@ public class ViewCourses extends AppCompatActivity
     private static final int REFRESH_KEY = 1;
 
     private Button updateCourses;
-    private Button refreshScreen;
     private Button back;
     private ArrayList<Course> courses_data_struct = new ArrayList<Course>();
 
@@ -78,7 +77,6 @@ public class ViewCourses extends AppCompatActivity
         this.courses_data_struct = SharedData.getCurrentCourses(this);
 
         configureUpdateCourses();
-        configureScreenRefresh();
         configureBackButton();
 
         this.r1 = (TableRow) findViewById(R.id.r1);
@@ -116,9 +114,11 @@ public class ViewCourses extends AppCompatActivity
         this.r5_comp_text = (TextView) findViewById(R.id.r5_comp);
         this.r6_comp_text = (TextView) findViewById(R.id.r6_comp);
 
+        setCourseList();
+    }
 
-
-
+    private void setCourseList()
+    {
         int array_list_size = courses_data_struct.size();
 
         TableRow[] row_arr = {r1, r2, r3, r4, r5, r6};
@@ -127,7 +127,7 @@ public class ViewCourses extends AppCompatActivity
         TextView[] time_arr = {r1_time_text, r2_time_text, r3_time_text, r4_time_text, r5_time_text, r6_time_text};
         TextView[] comp_arr = {r1_comp_text, r2_comp_text, r3_comp_text, r4_comp_text, r5_comp_text, r6_comp_text};
 
-
+        setInvisible(row_arr);
         makevisible(array_list_size, row_arr);
 
         for(int i = 0; i < array_list_size; i++)
@@ -204,59 +204,9 @@ public class ViewCourses extends AppCompatActivity
             {
                 Bundle bundleObject = data.getExtras();
                 this.courses_data_struct = (ArrayList<Course>) bundleObject.getSerializable("refresh");
-                System.out.println("This is the number of courses: " + courses_data_struct.size());
+                setCourseList();
             }
         }
-    }
-
-    // Function which refreshes the screen with the most up-to-date course info.
-    private void configureScreenRefresh()
-    {
-        refreshScreen = findViewById(R.id.refreshButton);
-
-        refreshScreen.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                int array_list_size = courses_data_struct.size();
-
-                TableRow[] row_arr = {r1, r2, r3, r4, r5, r6};
-                TextView[] course_arr = {r1_course_text, r2_course_text, r3_course_text, r4_course_text, r5_course_text, r6_course_text};
-                TextView[] cred_arr = {r1_cred_text, r2_cred_text, r3_cred_text, r4_cred_text, r5_cred_text, r6_cred_text};
-                TextView[] time_arr = {r1_time_text, r2_time_text, r3_time_text, r4_time_text, r5_time_text, r6_time_text};
-                TextView[] comp_arr = {r1_comp_text, r2_comp_text, r3_comp_text, r4_comp_text, r5_comp_text, r6_comp_text};
-
-                setInvisible(row_arr);
-                makevisible(array_list_size, row_arr);
-
-                for(int i = 0; i < array_list_size; i++)
-                {
-                    course_arr[i].setText(courses_data_struct.get(i).get_name());
-                    String credits = Integer.toString(courses_data_struct.get(i).get_cred_hours());
-                    cred_arr[i].setText(credits);
-                    Double time_aval = courses_data_struct.get(i).get_time_available();
-                    String time = Double.toString(time_aval);
-                    time_arr[i].setText(time);
-
-                    if(time_aval <= 0)
-                    {
-                        comp_arr[i].setBackgroundColor(Color.parseColor("#00FF00"));
-                        comp_arr[i].setText("Complete");
-                        comp_arr[i].setTextColor(Color.parseColor("#000000"));
-                        courses_data_struct.get(i).set_comp_stat(true);
-                    }
-
-                    else
-                    {
-                        comp_arr[i].setBackgroundColor(Color.parseColor("#FF0000"));
-                        comp_arr[i].setText("Incomplete");
-                        comp_arr[i].setTextColor(Color.parseColor("#FFFFFF"));
-                        courses_data_struct.get(i).set_comp_stat(false);
-                    }
-                }
-            }
-        });
     }
 
     // Function to return from the View Courses activity back to the home page

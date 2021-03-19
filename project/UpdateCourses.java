@@ -131,11 +131,15 @@ public class UpdateCourses extends AppCompatActivity
                     }
                 }
 
-                if(c.get_cred_hours() != 0 && !(c.get_name().equals("")) && (exists == false) && (!importanceLevel.equals("Select Importance Level")))
+                if(c.get_cred_hours() != 0 && !(c.get_name().equals("")) && (exists == false) && (!importanceLevel.equals("Select Importance Level")) && (courses_data_struct.size() < 6))
                 {
                     confirm_textview.setText("Successfully added: " + c.get_name() + " with credit hours: " + c.get_cred_hours() + " with time available: "+ c.get_time_available() + " minutes with importance level: " + c.get_level_of_importance());
                     courses_data_struct.add(c);
                     SharedData.saveCourses(getApplicationContext(), courses_data_struct);
+                }
+                else if(courses_data_struct.size() == 6)
+                {
+                    confirm_textview.setText("No more courses can be added! Maximum of 6 courses have been added! Please delete a course to add different course");
                 }
             }
         });

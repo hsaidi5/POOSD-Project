@@ -1,10 +1,11 @@
 package com.mytime;
 
 
+import java.io.Serializable;
 import java.lang.*;
 
 
-public class Course
+public class Course implements Serializable
 {
     private String name = "";
     private int cred_hours = 0;

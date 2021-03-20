@@ -218,7 +218,9 @@ During this sprint, I was in charge of implementing a way for the user to be abl
 
 ## Task Allocation
 
-_Hasan Assaidi_ - 
+_Hasan Assaidi_ - Refresh of View Courses Screen, Prevention of Adding More than 6 Courses, and Demonstration
+
+During this sprint, I completed 2 user stories. Thr first user story I completed was the refresh of the view courses screen. I had worked on the user story in the last sprint but ran into several issues. This sprint, I was able to fix all of the issues that came up by taking a different approach to refresh the screen. I also completed the user story which prevents the user from adding more than 6 courses. In addition, I completed the automated testing for both of the user stories and I made a product demonstration.
 
 _Yoseph Hassan_ - 
 

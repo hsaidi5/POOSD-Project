@@ -1,8 +1,10 @@
 package com.mytime;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,8 +16,11 @@ import java.util.ArrayList;
 
 public class ViewCourses extends AppCompatActivity
 {
+    private static final int REFRESH_KEY = 1;
+
     private Button updateCourses;
     private Button back;
+    private ArrayList<Course> courses_data_struct = new ArrayList<Course>();
 
     // Rows
     private TableRow r1;
@@ -50,7 +55,22 @@ public class ViewCourses extends AppCompatActivity
     private TextView r5_time_text;
     private TextView r6_time_text;
 
+    //Completion status cells
+    private TextView r1_comp_text;
+    private TextView r2_comp_text;
+    private TextView r3_comp_text;
+    private TextView r4_comp_text;
+    private TextView r5_comp_text;
+    private TextView r6_comp_text;
 
+    //Importance level cells
+    //Added by Pedro Nemalceff
+    private TextView r1_importance_text;
+    private TextView r2_importance_text;
+    private TextView r3_importance_text;
+    private TextView r4_importance_text;
+    private TextView r5_importance_text;
+    private TextView r6_importance_text;
 
 
     @Override
@@ -60,47 +80,80 @@ public class ViewCourses extends AppCompatActivity
         setContentView(R.layout.activity_view_courses);
 
 
-        ArrayList<Course> courses_data_struct = SharedData.getCurrentCourses(this);
+        this.courses_data_struct = SharedData.getCurrentCourses(this);
 
         configureUpdateCourses();
         configureBackButton();
 
-        r1_course_text = (TextView) findViewById(R.id.r1_course);
-        r2_course_text = (TextView) findViewById(R.id.r2_course);
-        r3_course_text = (TextView) findViewById(R.id.r3_course);
-        r4_course_text = (TextView) findViewById(R.id.r4_course);
-        r5_course_text = (TextView) findViewById(R.id.r5_course);
-        r6_course_text = (TextView) findViewById(R.id.r6_course);
+        this.r1 = (TableRow) findViewById(R.id.r1);
+        this.r2 = (TableRow) findViewById(R.id.r2);
+        this.r3 = (TableRow) findViewById(R.id.r3);
+        this.r4 = (TableRow) findViewById(R.id.r4);
+        this.r5 = (TableRow) findViewById(R.id.r5);
+        this.r6 = (TableRow) findViewById(R.id.r6);
 
-        r1_cred_text = (TextView) findViewById(R.id.r1_cred);
-        r2_cred_text = (TextView) findViewById(R.id.r2_cred);
-        r3_cred_text = (TextView) findViewById(R.id.r3_cred);
-        r4_cred_text = (TextView) findViewById(R.id.r4_cred);
-        r5_cred_text = (TextView) findViewById(R.id.r5_cred);
-        r6_cred_text = (TextView) findViewById(R.id.r6_cred);
+        this.r1_course_text = (TextView) findViewById(R.id.r1_course);
+        this.r2_course_text = (TextView) findViewById(R.id.r2_course);
+        this.r3_course_text = (TextView) findViewById(R.id.r3_course);
+        this.r4_course_text = (TextView) findViewById(R.id.r4_course);
+        this.r5_course_text = (TextView) findViewById(R.id.r5_course);
+        this.r6_course_text = (TextView) findViewById(R.id.r6_course);
 
-        r1_time_text = (TextView) findViewById(R.id.r1_time);
-        r2_time_text = (TextView) findViewById(R.id.r2_time);
-        r3_time_text = (TextView) findViewById(R.id.r3_time);
-        r4_time_text = (TextView) findViewById(R.id.r4_time);
-        r5_time_text = (TextView) findViewById(R.id.r5_time);
-        r6_time_text = (TextView) findViewById(R.id.r6_time);
+        this.r1_cred_text = (TextView) findViewById(R.id.r1_cred);
+        this.r2_cred_text = (TextView) findViewById(R.id.r2_cred);
+        this.r3_cred_text = (TextView) findViewById(R.id.r3_cred);
+        this.r4_cred_text = (TextView) findViewById(R.id.r4_cred);
+        this.r5_cred_text = (TextView) findViewById(R.id.r5_cred);
+        this.r6_cred_text = (TextView) findViewById(R.id.r6_cred);
 
-        r1 = (TableRow) findViewById(R.id.r1);
-        r2 = (TableRow) findViewById(R.id.r2);
-        r3 = (TableRow) findViewById(R.id.r3);
-        r4 = (TableRow) findViewById(R.id.r4);
-        r5 = (TableRow) findViewById(R.id.r5);
-        r6 = (TableRow) findViewById(R.id.r6);
+        this.r1_time_text = (TextView) findViewById(R.id.r1_time);
+        this.r2_time_text = (TextView) findViewById(R.id.r2_time);
+        this.r3_time_text = (TextView) findViewById(R.id.r3_time);
+        this.r4_time_text = (TextView) findViewById(R.id.r4_time);
+        this.r5_time_text = (TextView) findViewById(R.id.r5_time);
+        this.r6_time_text = (TextView) findViewById(R.id.r6_time);
 
+        this.r1_comp_text = (TextView) findViewById(R.id.r1_comp);
+        this.r2_comp_text = (TextView) findViewById(R.id.r2_comp);
+        this.r3_comp_text = (TextView) findViewById(R.id.r3_comp);
+        this.r4_comp_text = (TextView) findViewById(R.id.r4_comp);
+        this.r5_comp_text = (TextView) findViewById(R.id.r5_comp);
+        this.r6_comp_text = (TextView) findViewById(R.id.r6_comp);
 
-        int array_list_size = courses_data_struct.size();
+        //Added by Pedro Nemalceff
+        this.r1_importance_text = (TextView) findViewById(R.id.r1_importance);
+        this.r2_importance_text = (TextView) findViewById(R.id.r2_importance);
+        this.r3_importance_text = (TextView) findViewById(R.id.r3_importance);
+        this.r4_importance_text = (TextView) findViewById(R.id.r4_importance);
+        this.r5_importance_text = (TextView) findViewById(R.id.r5_importance);
+        this.r6_importance_text = (TextView) findViewById(R.id.r6_importance);
+
+        setCourseList();
+    }
+
+    private void setCourseList()
+    {
+        int array_list_size = 0;
+
+        if(courses_data_struct == null)
+        {
+            array_list_size = 0;
+        }
+        else
+        {
+            array_list_size = courses_data_struct.size();
+        }
 
         TableRow[] row_arr = {r1, r2, r3, r4, r5, r6};
         TextView[] course_arr = {r1_course_text, r2_course_text, r3_course_text, r4_course_text, r5_course_text, r6_course_text};
         TextView[] cred_arr = {r1_cred_text, r2_cred_text, r3_cred_text, r4_cred_text, r5_cred_text, r6_cred_text};
         TextView[] time_arr = {r1_time_text, r2_time_text, r3_time_text, r4_time_text, r5_time_text, r6_time_text};
+        TextView[] comp_arr = {r1_comp_text, r2_comp_text, r3_comp_text, r4_comp_text, r5_comp_text, r6_comp_text};
 
+        //Added by Pedro Nemalceff
+        TextView[] importance_arr = {r1_importance_text, r2_importance_text, r3_importance_text, r4_importance_text, r5_importance_text, r6_importance_text};
+
+        setInvisible(row_arr);
         makevisible(array_list_size, row_arr);
 
         for(int i = 0; i < array_list_size; i++)
@@ -108,10 +161,29 @@ public class ViewCourses extends AppCompatActivity
             course_arr[i].setText(courses_data_struct.get(i).get_name());
             String credits = Integer.toString(courses_data_struct.get(i).get_cred_hours());
             cred_arr[i].setText(credits);
-            String time = Double.toString(courses_data_struct.get(i).get_time_available());
+            Double time_aval = courses_data_struct.get(i).get_time_available();
+            String time = Double.toString(time_aval);
             time_arr[i].setText(time);
-        }
 
+            //Added by Pedro Nemalceff
+            importance_arr[i].setText(courses_data_struct.get(i).get_level_of_importance());
+
+            if(time_aval <= 0)
+            {
+                comp_arr[i].setBackgroundColor(Color.parseColor("#00FF00"));
+                comp_arr[i].setText("Complete");
+                comp_arr[i].setTextColor(Color.parseColor("#000000"));
+                courses_data_struct.get(i).set_comp_stat(true);
+            }
+
+            else
+            {
+                comp_arr[i].setBackgroundColor(Color.parseColor("#FF0000"));
+                comp_arr[i].setText("Incomplete");
+                comp_arr[i].setTextColor(Color.parseColor("#FFFFFF"));
+                courses_data_struct.get(i).set_comp_stat(false);
+            }
+        }
     }
 
     private void makevisible(int size, TableRow[] row_arr)
@@ -122,6 +194,14 @@ public class ViewCourses extends AppCompatActivity
             {
                 row_arr[i].setVisibility(View.VISIBLE);
             }
+        }
+    }
+
+    private void setInvisible(TableRow[] row_arr)
+    {
+        for(int i = 0; i < row_arr.length; i++)
+        {
+            row_arr[i].setVisibility(View.INVISIBLE);
         }
     }
 
@@ -136,9 +216,26 @@ public class ViewCourses extends AppCompatActivity
             public void onClick(View v)
             {
                 Intent intent = new Intent(ViewCourses.this, UpdateCourses.class);
-                startActivity(intent);
+                startActivityForResult(intent, REFRESH_KEY);
             }
         });
+    }
+
+    // Function to retrieve the up-to-date course info from the update courses screen.
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode == REFRESH_KEY)
+        {
+            if(resultCode == RESULT_OK)
+            {
+                Bundle bundleObject = data.getExtras();
+                this.courses_data_struct = (ArrayList<Course>) bundleObject.getSerializable("refresh");
+                setCourseList();
+            }
+        }
     }
 
     // Function to return from the View Courses activity back to the home page

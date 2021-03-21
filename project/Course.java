@@ -3,6 +3,7 @@ package com.mytime;
 
 import java.io.Serializable;
 import java.lang.*;
+import java.util.ArrayList;
 
 
 public class Course implements Serializable
@@ -12,6 +13,8 @@ public class Course implements Serializable
     private double time_available = 0.0;
     private boolean completion_stat = false;
     private String level_of_importance = "";
+    private ArrayList<Double> hours_spent = new ArrayList<Double>();
+    private double avg_study_time = 0.0;
 
     public void set_name(String str)
     {
@@ -80,6 +83,27 @@ public class Course implements Serializable
             return this.completion_stat = false;
         }
         //return this.completion_stat;
+    }
+
+    public ArrayList<Double> get_hours_spent()
+    {
+        return this.hours_spent;
+    }
+
+    public void set_avg_study_time()
+    {
+        double sum = 0.0, avg = 0.0;
+
+        for (int i = 0; i < this.get_hours_spent().size(); i++)
+            sum += this.get_hours_spent().get(i);
+
+        avg = sum / this.get_hours_spent().size();
+        avg_study_time = Math.floor(avg * 100) / 100;
+    }
+
+    public double get_avg_study_time()
+    {
+        return avg_study_time;
     }
 
 }

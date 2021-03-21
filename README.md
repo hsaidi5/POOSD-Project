@@ -224,10 +224,12 @@ During this sprint, I completed 2 user stories. Thr first user story I completed
 
 _Yoseph Hassan_ - History Functionality
 
-During this sprint, I wsa repsonsible for working on the history functionality of the application. This would dispay a log of the courses and their associated time spent studying for them. This is a core functionality of our application and was harder to implement than originally expected. Currently I am still working on the automated testing for the code. However after some comprehensive regualr testing, the code seems to be working as intended.
+During this sprint, I was repsonsible for working on the history functionality of the application. This would dispay a log of the courses and their associated time spent studying for them. This is a core functionality of our application and was harder to implement than originally expected. Currently I am still working on the automated testing for the code. However after some comprehensive regular testing, the code seems to be working as intended.
 
 _Jean Cestin_ - 
 
-_Christopher Delarosa_ - 
+_Christopher Delarosa_ - Averaging Study Session Time Functionality
+
+During this sprint, I managed the function that averages the amount of time a student has spent studying for a specific class. Taking and storing the information from the StudySession activity and averaging it all together, this information will later be displayed in the History activity at a later date. An automated test has been made to ensure that the function properly calculates the average for a given class.
 
 _Pedro Nemalceff_ - 

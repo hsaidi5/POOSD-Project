@@ -34,6 +34,7 @@
 
         <TableRow android:background="@color/colorBlue">
 
+            <!-- Course -->
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -44,16 +45,18 @@
                 android:textColor="@android:color/white"
                 android:textSize="14sp" />
 
+            <!--Credit Hours-->
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
+                android:layout_weight="3"
                 android:gravity="center_horizontal"
                 android:padding="10sp"
                 android:text="Credit Hours"
                 android:textColor="@android:color/white"
                 android:textSize="14sp" />
 
+            <!--Time Available-->
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -64,16 +67,27 @@
                 android:textColor="@android:color/white"
                 android:textSize="14sp" />
 
+            <!--Completion Status-->
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="4"
+                android:layout_weight="5"
                 android:gravity="center_horizontal"
                 android:padding="10sp"
                 android:text="Completion Status"
                 android:textColor="@android:color/white"
                 android:textSize="14sp" />
 
+            <!--Importance Level-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="Importance Level"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
 
         </TableRow>
 
@@ -112,6 +126,15 @@
 
             <TextView
                 android:id="@+id/r1_comp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/r1_importance"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
@@ -163,6 +186,15 @@
                 android:textSize="12sp"
                 />
 
+            <TextView
+                android:id="@+id/r2_importance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
 
         </TableRow>
 
@@ -199,6 +231,15 @@
 
             <TextView
                 android:id="@+id/r3_comp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/r3_importance"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
@@ -248,6 +289,15 @@
                 android:padding="10sp"
                 android:textSize="12sp" />
 
+            <TextView
+                android:id="@+id/r4_importance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
         </TableRow>
 
         <TableRow
@@ -290,6 +340,15 @@
                 android:padding="10sp"
                 android:textSize="12sp" />
 
+            <TextView
+                android:id="@+id/r5_importance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
         </TableRow>
 
         <TableRow
@@ -325,6 +384,15 @@
 
             <TextView
                 android:id="@+id/r6_comp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/r6_importance"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"

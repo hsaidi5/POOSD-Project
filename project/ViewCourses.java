@@ -63,8 +63,14 @@ public class ViewCourses extends AppCompatActivity
     private TextView r5_comp_text;
     private TextView r6_comp_text;
 
-
-
+    //Importance level cells
+    //Added by Pedro Nemalceff
+    private TextView r1_importance_text;
+    private TextView r2_importance_text;
+    private TextView r3_importance_text;
+    private TextView r4_importance_text;
+    private TextView r5_importance_text;
+    private TextView r6_importance_text;
 
 
     @Override
@@ -114,18 +120,38 @@ public class ViewCourses extends AppCompatActivity
         this.r5_comp_text = (TextView) findViewById(R.id.r5_comp);
         this.r6_comp_text = (TextView) findViewById(R.id.r6_comp);
 
+        //Added by Pedro Nemalceff
+        this.r1_importance_text = (TextView) findViewById(R.id.r1_importance);
+        this.r2_importance_text = (TextView) findViewById(R.id.r2_importance);
+        this.r3_importance_text = (TextView) findViewById(R.id.r3_importance);
+        this.r4_importance_text = (TextView) findViewById(R.id.r4_importance);
+        this.r5_importance_text = (TextView) findViewById(R.id.r5_importance);
+        this.r6_importance_text = (TextView) findViewById(R.id.r6_importance);
+
         setCourseList();
     }
 
     private void setCourseList()
     {
-        int array_list_size = courses_data_struct.size();
+        int array_list_size = 0;
+
+        if(courses_data_struct == null)
+        {
+            array_list_size = 0;
+        }
+        else
+        {
+            array_list_size = courses_data_struct.size();
+        }
 
         TableRow[] row_arr = {r1, r2, r3, r4, r5, r6};
         TextView[] course_arr = {r1_course_text, r2_course_text, r3_course_text, r4_course_text, r5_course_text, r6_course_text};
         TextView[] cred_arr = {r1_cred_text, r2_cred_text, r3_cred_text, r4_cred_text, r5_cred_text, r6_cred_text};
         TextView[] time_arr = {r1_time_text, r2_time_text, r3_time_text, r4_time_text, r5_time_text, r6_time_text};
         TextView[] comp_arr = {r1_comp_text, r2_comp_text, r3_comp_text, r4_comp_text, r5_comp_text, r6_comp_text};
+
+        //Added by Pedro Nemalceff
+        TextView[] importance_arr = {r1_importance_text, r2_importance_text, r3_importance_text, r4_importance_text, r5_importance_text, r6_importance_text};
 
         setInvisible(row_arr);
         makevisible(array_list_size, row_arr);
@@ -138,6 +164,9 @@ public class ViewCourses extends AppCompatActivity
             Double time_aval = courses_data_struct.get(i).get_time_available();
             String time = Double.toString(time_aval);
             time_arr[i].setText(time);
+
+            //Added by Pedro Nemalceff
+            importance_arr[i].setText(courses_data_struct.get(i).get_level_of_importance());
 
             if(time_aval <= 0)
             {

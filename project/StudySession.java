@@ -58,7 +58,7 @@ public class StudySession extends AppCompatActivity
 
         runTimer();
     }
-    
+
     // Implemented by Christopher Delarosa.
     // Dropdown list that displays the list of courses.
     private void setupDropdownList(ArrayList<Course> enrolledCourses)
@@ -136,7 +136,6 @@ public class StudySession extends AppCompatActivity
         });
     }
 
-    // Implemented by Christopher Delarosa.
     // Sends the user back to the starting screen.
     private void configureBackButton()
     {
@@ -219,6 +218,10 @@ public class StudySession extends AppCompatActivity
                 running = false;
 
                 update_hours_remaining(enrolledCourses);
+
+                SharedData.clearCourses(getApplicationContext());
+                SharedData.saveCourses(getApplicationContext(), enrolledCourses);
+
                 stop.setVisibility(View.GONE);
                 pause.setVisibility(View.GONE);
                 start.setVisibility(View.VISIBLE);
@@ -301,6 +304,7 @@ public class StudySession extends AppCompatActivity
 
     // Implemented by Christopher Delarosa.
     // Code to deduct the amount of time spent studying from the amount of time remaining.
+    // Now adds the number of hours spent studying for the corresponding class.
     private void update_hours_remaining(ArrayList<Course> enrolledCourses)
     {
         double timeSpent = (seconds / 60.0) + (seconds / 3600.0);
@@ -312,6 +316,8 @@ public class StudySession extends AppCompatActivity
             {
                 double starting = enrolledCourses.get(i).get_time_available();
                 enrolledCourses.get(i).set_time_available(starting - timeSpent);
+                enrolledCourses.get(i).get_hours_spent().add(timeSpent);
+                enrolledCourses.get(i).set_avg_study_time();
 
                 if (enrolledCourses.get(i).get_time_available() < 0)
                 {

@@ -232,4 +232,6 @@ _Christopher Delarosa_ - Averaging Study Session Time Functionality
 
 During this sprint, I managed the function that averages the amount of time a student has spent studying for a specific class. Taking and storing the information from the StudySession activity and averaging it all together, this information will later be displayed in the History activity at a later date. An automated test has been made to ensure that the function properly calculates the average for a given class.
 
-_Pedro Nemalceff_ - 
+_Pedro Nemalceff_ - Importance Level of Course Improved Functionality and Visualization
+
+During this sprint, I cleaned up the code for adding the importance level for a course and added visualization for it. Before, the data just being stored inside of the Course object. Now it is displayed on the courses table in the View Courses page of the application. I also made an automated test to ensure the function properly adds the importance level along with every other attribute the course object contains.

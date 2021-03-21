@@ -224,7 +224,7 @@ During this sprint, I completed 2 user stories. Thr first user story I completed
 
 _Yoseph Hassan_ - History Functionality
 
-During this sprint, I wsa repsonsible for working on the history functionality of the application. This would dispay a log of the courses and their associated time spent studying for them. This is a core functionality of our application and was harder to implement than originally expected.
+During this sprint, I wsa repsonsible for working on the history functionality of the application. This would dispay a log of the courses and their associated time spent studying for them. This is a core functionality of our application and was harder to implement than originally expected. Currently I am still working on the automated testing for the code. However after some comprehensive regualr testing, the code seems to be working as intended.
 
 _Jean Cestin_ - 
 

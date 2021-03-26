@@ -46,7 +46,7 @@ In terms of the code design we have provided a comprehensive diagram which displ
 
 The UML diagram below shows how the different classes which we have created are interacting with each other in the current state of the product.
 
-![UML Diagram](https://github.com/hsaidi5/POOSD-Project/blob/master/artifacts/UML%20Diagram.PNG)
+![UML Diagram](https://github.com/hsaidi5/POOSD-Project/blob/master/artifacts/class_diagram.PNG)
 
 The table below shows how the classes relate to each of the user stories.
 

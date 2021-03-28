@@ -260,7 +260,9 @@ During this sprint, I was responsible for working on the sorting history loga fu
 _Jean Cestin_ - 
 
 
-_Christopher Delarosa_ - 
+_Christopher Delarosa_ - Average Study Session Time Polishing & Break Timer
+
+During this sprint, I polished up the UI for displaying average amount of time spent studying for a registered class. It's essentially been designed to work very similarly to the ViewCourses activity when it comes to functionality. Aside from that, the key feature that I worked on for this sprint was implementing a timer after the user starts their study break.
 
 
 _Pedro Nemalceff_ - 

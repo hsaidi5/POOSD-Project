@@ -237,3 +237,30 @@ During this sprint, I managed the function that averages the amount of time a st
 _Pedro Nemalceff_ - Importance Level of Course Improved Functionality and Visualization
 
 During this sprint, I cleaned up the code for adding the importance level for a course and added visualization for it. Before, the data just being stored inside of the Course object. Now it is displayed on the courses table in the View Courses page of the application. I also made an automated test to ensure the function properly adds the importance level along with every other attribute the course object contains.
+
+# Sprint 8
+
+- [Trello Board (Backlogs and Requirements)](https://trello.com/b/KJKknr6O/project-task-board)
+- [Burndown Chart](https://docs.google.com/spreadsheets/d/12tdoDcIdkjIooK6anzd5tF59lHYUTzUjkSDbxJay16k/edit#gid=1725991992)
+- [Velocity Chart](https://docs.google.com/spreadsheets/d/12s2MgZycmOZ50Mo1SNa9Wc9LwtmNB-iMbmJFyHv1GJs/edit#gid=0)
+- [System Architecture](https://github.com/hsaidi5/POOSD-Project/blob/master/artifacts/architechture.md)
+- [Source Code](https://github.com/hsaidi5/POOSD-Project/tree/master/project)
+- [Tests](https://github.com/hsaidi5/POOSD-Project/tree/master/artifacts/testing)
+- [Demonstration]()
+
+## Task Allocation
+
+_Hasan Assaidi_ - 
+
+
+_Yoseph Hassan_ - 
+
+
+_Jean Cestin_ - 
+
+
+_Christopher Delarosa_ - 
+
+
+_Pedro Nemalceff_ - 
+

@@ -253,8 +253,9 @@ During this sprint, I cleaned up the code for adding the importance level for a 
 _Hasan Assaidi_ - 
 
 
-_Yoseph Hassan_ - 
+_Yoseph Hassan_ - Sorting History Functionality
 
+During this sprint, I was responsible for working on the sorting history loga functionality of the application. I incorporated a button which when clicked allows for the user to sort the log of study sessions from least to greatest time spent. This became an essential feature for the application as this user story allows for users to see the areas they have spent the most time and those where they have spent the least.
 
 _Jean Cestin_ - 
 

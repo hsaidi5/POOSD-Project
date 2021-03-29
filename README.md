@@ -257,7 +257,9 @@ _Yoseph Hassan_ - Sorting History Functionality
 
 During this sprint, I was responsible for working on the sorting history loga functionality of the application. I incorporated a button which when clicked allows for the user to sort the log of study sessions from least to greatest time spent. This became an essential feature for the application as this user story allows for users to see the areas they have spent the most time and those where they have spent the least.
 
-_Jean Cestin_ - 
+_Jean Cestin_ -   Testing the System
+
+During this sprint I worked on testing the system to make sure it works, and to make sure the users will be satify with the product. 
 
 
 _Christopher Delarosa_ - Average Study Session Time Polishing & Break Timer

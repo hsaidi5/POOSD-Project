@@ -166,7 +166,24 @@ public class ViewCourses extends AppCompatActivity
             time_arr[i].setText(time);
 
             //Added by Pedro Nemalceff
-            importance_arr[i].setText(courses_data_struct.get(i).get_level_of_importance());
+            String importance_level = courses_data_struct.get(i).get_level_of_importance();
+            importance_arr[i].setText(importance_level);
+
+            //Added for Sprint 8 by Pedro Nemalceff
+            switch (importance_level) {
+                case "Not Important":
+                    importance_arr[i].setTextColor(Color.parseColor("#00FF00"));
+                    break;
+                case "Somewhat Important":
+                    importance_arr[i].setTextColor(Color.parseColor("#FFFF00"));
+                    break;
+                case "Important":
+                    importance_arr[i].setTextColor(Color.parseColor("#FFA500"));
+                    break;
+                case "Very Important":
+                    importance_arr[i].setTextColor(Color.parseColor("#FF0000"));
+                    break;
+            }
 
             if(time_aval <= 0)
             {

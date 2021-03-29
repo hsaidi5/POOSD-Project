@@ -48,7 +48,7 @@ public class StudySession extends AppCompatActivity
         ArrayList<Course> enrolledCourses = SharedData.getCurrentCourses(this);
 
         setupDropdownList(enrolledCourses);
-        configureBackButton();
+        configureBackButton(enrolledCourses);
         configureStartButton();
         configurePauseButton();
         configureStopButton(enrolledCourses);
@@ -138,7 +138,7 @@ public class StudySession extends AppCompatActivity
 
     // Implemented by Christopher Delarosa.
     // Sends the user back to the starting screen.
-    private void configureBackButton()
+    private void configureBackButton(ArrayList<Course> enrolledCourses)
     {
         back = findViewById(R.id.backFromStudy);
 
@@ -147,6 +147,11 @@ public class StudySession extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
+                update_hours_remaining(enrolledCourses);
+
+                SharedData.clearCourses(getApplicationContext());
+                SharedData.saveCourses(getApplicationContext(), enrolledCourses);
+
                 finish();
             }
         });

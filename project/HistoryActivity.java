@@ -16,6 +16,7 @@ public class HistoryActivity extends AppCompatActivity
 {
 
     private Button back;
+    private Button clear;
     private Button sort;
     private Button unsort_butt;
     private ScrollView history_scroll;
@@ -35,6 +36,7 @@ public class HistoryActivity extends AppCompatActivity
         configureCourses(courses_data_struct);
         configureBackButton();
         sort_HistoryList();
+        clearStudyHistory();
         unsort();
     }
 
@@ -120,6 +122,26 @@ public class HistoryActivity extends AppCompatActivity
                 }
                 historyText.setText("");
                 historyText.setText(str);
+            }
+        });
+    }
+
+    private void clearStudyHistory()
+    {
+        clear = findViewById(R.id.clearHistory);
+
+        clear.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                historyText.setText("");
+                for(int i = 0; i < courses_data_struct.size(); i++)
+                {
+                    courses_data_struct.get(i).get_hours_spent().clear();
+                }
+                SharedData.clearCourses(getApplicationContext());
+                SharedData.saveCourses(getApplicationContext(), courses_data_struct);
             }
         });
     }

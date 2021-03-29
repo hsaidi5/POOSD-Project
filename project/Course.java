@@ -8,6 +8,8 @@ import java.util.ArrayList;
 
 public class Course implements Serializable
 {
+    private static int startOfWeek = 0;
+    private static int dayLastChecked = 0;
     private String name = "";
     private int cred_hours = 0;
     private double time_available = 0.0;
@@ -19,8 +21,27 @@ public class Course implements Serializable
 
     public void set_name(String str)
     {
-
         this.name = str;
+    }
+
+    public void setStartOfWeek(int day)
+    {
+        startOfWeek = day;
+    }
+
+    public int getStartOfWeek()
+    {
+        return startOfWeek;
+    }
+
+    public void setLastChecked(int day)
+    {
+        dayLastChecked = day;
+    }
+
+    public int getLastChecked()
+    {
+        return dayLastChecked;
     }
 
     //Added by Pedro Nemalceff
@@ -115,6 +136,15 @@ public class Course implements Serializable
     public Double get_hours_for_sort()
     {
         return this.hours_spent_for_sort;
+    }
+
+    public void resetTimeAvailable()
+    {
+        // calculating time available (in minutes) to study based on the number of credit hours
+        double time = (this.cred_hours * 3) * 60;
+        // subtracting 180 minutes from overall time to account for the lectures and labs (on average about 3 hours total)
+        double time_after_lectures = time - 180;
+        this.time_available = time_after_lectures;
     }
 
 }

@@ -7,6 +7,33 @@
     tools:context=".HistoryActivity">
 
     <!--Button to return to home page from activity-->
+
+    <Button
+        android:id="@+id/unsort_butt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unsort"
+        app:backgroundTint="#3097CA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.897"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.96" />
+
+    <Button
+        android:id="@+id/sort_butt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sort"
+        app:backgroundTint="#3097CA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.96" />
+
     <Button
         android:id="@+id/backFromHistory"
         android:layout_width="wrap_content"

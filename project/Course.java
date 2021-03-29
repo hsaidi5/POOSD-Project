@@ -15,6 +15,7 @@ public class Course implements Serializable
     private String level_of_importance = "";
     private ArrayList<Double> hours_spent = new ArrayList<Double>();
     private double avg_study_time = 0.0;
+    private double hours_spent_for_sort = 0.0;
 
     public void set_name(String str)
     {
@@ -104,6 +105,16 @@ public class Course implements Serializable
     public double get_avg_study_time()
     {
         return avg_study_time;
+    }
+
+    public void set_hours_for_sort(double hrs)
+    {
+        this.hours_spent_for_sort = hrs;
+    }
+
+    public Double get_hours_for_sort()
+    {
+        return this.hours_spent_for_sort;
     }
 
 }

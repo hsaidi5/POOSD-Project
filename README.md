@@ -250,8 +250,9 @@ During this sprint, I cleaned up the code for adding the importance level for a 
 
 ## Task Allocation
 
-_Hasan Assaidi_ - 
+_Hasan Assaidi_ - Clear History Button, Weekly Reset of Time Available, and Product Demonstration
 
+During this sprint, I completed user story U023. This user story allows the user to clear the contents of the history of previous study sessions. This allows the user to only keep the history they want to keep. I also worked on completing the weekly reset of the time available. I was able to figure out how to recognize when a user is in a different week, however I was unable to thouroughly test this due to time constraints. In addition, I completed the final product demonstration for our product with Yoseph.
 
 _Yoseph Hassan_ - Sorting History Functionality & Demonstration
 

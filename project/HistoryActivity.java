@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ScrollView;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 import java.lang.reflect.Array;
@@ -23,6 +24,30 @@ public class HistoryActivity extends AppCompatActivity
     private TextView historyText;
     private ArrayList<Course> courses_data_struct = new ArrayList<Course>();
 
+    // Rows
+    private TableRow r1_avg;
+    private TableRow r2_avg;
+    private TableRow r3_avg;
+    private TableRow r4_avg;
+    private TableRow r5_avg;
+    private TableRow r6_avg;
+
+    // TextViews for course names.
+    private TextView courseOne;
+    private TextView courseTwo;
+    private TextView courseThree;
+    private TextView courseFour;
+    private TextView courseFive;
+    private TextView courseSix;
+
+    // TextViews for average study times.
+    private TextView avgOne;
+    private TextView avgTwo;
+    private TextView avgThree;
+    private TextView avgFour;
+    private TextView avgFive;
+    private TextView avgSix;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -32,8 +57,29 @@ public class HistoryActivity extends AppCompatActivity
         historyText = (TextView) findViewById(R.id.historyText);
         courses_data_struct = SharedData.getCurrentCourses(this);
 
+        r1_avg = findViewById(R.id.r1_avg);
+        r2_avg = findViewById(R.id.r2_avg);
+        r3_avg = findViewById(R.id.r3_avg);
+        r4_avg = findViewById(R.id.r4_avg);
+        r5_avg = findViewById(R.id.r5_avg);
+        r6_avg = findViewById(R.id.r6_avg);
+
+        courseOne = findViewById(R.id.course_1);
+        courseTwo = findViewById(R.id.course_2);
+        courseThree = findViewById(R.id.course_3);
+        courseFour = findViewById(R.id.course_4);
+        courseFive = findViewById(R.id.course_5);
+        courseSix = findViewById(R.id.course_6);
+
+        avgOne = findViewById(R.id.avg_1);
+        avgTwo = findViewById(R.id.avg_2);
+        avgThree = findViewById(R.id.avg_3);
+        avgFour = findViewById(R.id.avg_4);
+        avgFive = findViewById(R.id.avg_5);
+        avgSix = findViewById(R.id.avg_6);
+
         populateHistoryList();
-        configureCourses(courses_data_struct);
+        configureCourses();
         configureBackButton();
         sort_HistoryList();
         clearStudyHistory();
@@ -43,11 +89,13 @@ public class HistoryActivity extends AppCompatActivity
     private void populateHistoryList()
     {
         String str = new String();
+        double sum = 0.0;
 
         for(int i = 0; i < courses_data_struct.size(); i++)
         {
             for(int j = 0; j < courses_data_struct.get(i).get_hours_spent().size(); j++)
             {
+                sum += courses_data_struct.get(i).get_hours_spent().get(j);
                 str += "Course: " + courses_data_struct.get(i).get_name() + ", Time Spent: " + courses_data_struct.get(i).get_hours_spent().get(j) + "\n";
             }
 
@@ -146,21 +194,47 @@ public class HistoryActivity extends AppCompatActivity
         });
     }
 
-    private void configureCourses(ArrayList<Course> enrolledCourses)
+    // Implemented by Christopher Delarosa
+    // Retrieves and sets information for average study times per course.
+    private void configureCourses()
     {
-        TextView courseOne = findViewById(R.id.textView5);
-        TextView courseTwo = findViewById(R.id.textView4);
+        int array_list_size = 0;
+        TableRow[] rows = {r1_avg, r2_avg, r3_avg, r4_avg, r5_avg, r6_avg};
+        TextView[] courses = {courseOne, courseTwo, courseThree, courseFour, courseFive, courseSix};
+        TextView[] averages = {avgOne, avgTwo, avgThree, avgFour, avgFive, avgSix};
 
-        TextView avgOne = findViewById(R.id.textView3);
-        TextView avgTwo = findViewById(R.id.textView6);
+        if (courses_data_struct != null)
+            array_list_size = courses_data_struct.size();
 
-        courseOne.setText(enrolledCourses.get(0).get_name());
-        courseTwo.setText(enrolledCourses.get(1).get_name());
+        setInvisible(rows);
+        makevisible(array_list_size, rows);
 
-        String timeOne = String.format(Locale.getDefault(), "%02.02f", enrolledCourses.get(0).get_avg_study_time());
-        String timeTwo = String.format(Locale.getDefault(), "%02.02f", enrolledCourses.get(1).get_avg_study_time());
-        avgOne.setText(timeOne);
-        avgTwo.setText(timeTwo);
+        for (int i = 0; i < array_list_size; i++)
+        {
+            String avgStr = String.format(Locale.getDefault(), "%02.02f", courses_data_struct.get(i).get_avg_study_time());
+            courses[i].setText(courses_data_struct.get(i).get_name());
+            averages[i].setText(avgStr);
+        }
+    }
+
+    // This function, along with setInvisible() have been recycled from ViewCourses.
+    private void makevisible(int size, TableRow[] row_arr)
+    {
+        for(int i = 0; i < size; i++)
+        {
+            if(size >= i + 1)
+            {
+                row_arr[i].setVisibility(View.VISIBLE);
+            }
+        }
+    }
+
+    private void setInvisible(TableRow[] row_arr)
+    {
+        for(int i = 0; i < row_arr.length; i++)
+        {
+            row_arr[i].setVisibility(View.INVISIBLE);
+        }
     }
 
     // Function to return to the home page from the History activity

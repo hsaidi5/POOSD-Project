@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
@@ -306,6 +307,26 @@ public class StudySession extends AppCompatActivity
 
         AlertDialog breakDialog = builder.create();
         breakDialog.show();
+
+        CountDownTimer timer = new CountDownTimer(300000, 1000)
+        {
+            @Override
+            public void onTick(long millisUntilFinished)
+            {
+                long break_mins = millisUntilFinished / 60000;
+                long break_secs = (millisUntilFinished % 60000) / 1000;
+
+                String break_timer = String.format("%02d:%02d", break_mins, break_secs);
+                breakDialog.setMessage(msg + "\n\n" +
+                        "Suggested Time Remaining for Break: " + break_timer);
+            }
+
+            @Override
+            public void onFinish()
+            {
+                breakDialog.cancel();
+            }
+        }.start();
     }
 
     // Implemented by Christopher Delarosa.

@@ -175,10 +175,10 @@ public class ViewCourses extends AppCompatActivity
                     importance_arr[i].setTextColor(Color.parseColor("#00FF00"));
                     break;
                 case "Somewhat Important":
-                    importance_arr[i].setTextColor(Color.parseColor("#FFFF00"));
+                    importance_arr[i].setTextColor(Color.parseColor("#FFC100"));
                     break;
                 case "Important":
-                    importance_arr[i].setTextColor(Color.parseColor("#FFA500"));
+                    importance_arr[i].setTextColor(Color.parseColor("#FF8100"));
                     break; 
                 case "Very Important":
                     importance_arr[i].setTextColor(Color.parseColor("#FF0000"));

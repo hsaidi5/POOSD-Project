@@ -148,10 +148,14 @@ public class StudySession extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                update_hours_remaining(enrolledCourses);
+                if(seconds !=0 && minutes != 0)
+                {
+                    update_hours_remaining(enrolledCourses);
 
-                SharedData.clearCourses(getApplicationContext());
-                SharedData.saveCourses(getApplicationContext(), enrolledCourses);
+                    SharedData.clearCourses(getApplicationContext());
+                    SharedData.saveCourses(getApplicationContext(), enrolledCourses);
+                }
+
 
                 finish();
             }
